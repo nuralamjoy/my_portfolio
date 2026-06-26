@@ -1,9 +1,12 @@
 import React from 'react'
 import './App.css'
+import Nav from './components/Header/Nav'
 const App = () => {
   return (
-    <div>nur joy</div>
-  )
+    <div>
+      <Nav></Nav>
+    </div>
+  );
 }
 
 export default App
