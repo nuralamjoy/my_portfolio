@@ -3,9 +3,7 @@ import './App.css'
 import Nav from './components/Header/Nav'
 const App = () => {
   return (
-    <div>
-      <Nav></Nav>
-    </div>
+    
   );
 }
 
