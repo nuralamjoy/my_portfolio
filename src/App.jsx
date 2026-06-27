@@ -4,7 +4,7 @@ import Nav from './components/Header/Nav'
 const App = () => {
   return (
     <>
-      <Nav />
+      <Nav></Nav>
       
       <div className="pt-20">
         <section className="h-screen flex items-center justify-center bg-gray-100">
