@@ -16,7 +16,7 @@ const Nav = () => {
     <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-lg shadow-md z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* ====Logo==== */}
           <h1 className="text-2xl font-bold text-blue-600 cursor-pointer">
             NurJoy
           </h1>
