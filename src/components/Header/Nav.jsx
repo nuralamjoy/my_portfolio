@@ -40,7 +40,7 @@ const Nav = () => {
             Hire Me
           </button>
 
-          {/* Mobile Menu Button */}
+          {/* ====Mobile Menu Button==== */}
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
