@@ -21,7 +21,7 @@ const Nav = () => {
             NurJoy
           </h1>
 
-          {/* Desktop Menu */}
+          {/* ====Desktop Menu==== */}
           <ul className="hidden md:flex items-center gap-8">
             {navLinks.map((item) => (
               <li key={item.name}>
