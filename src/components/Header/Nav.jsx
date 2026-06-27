@@ -47,7 +47,7 @@ const Nav = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ====Mobile Menu==== */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <ul className="flex flex-col items-center py-6 gap-5">
