@@ -1,85 +1,222 @@
-/* Main Background */
-body {
-  background: #050010;
-  overflow-x: hidden;
-}
-
-/* Moving Grid */
-.grid-bg {
-  position: fixed;
-  inset: 0;
-  width: 200%;
-  height: 200%;
-  z-index: -2;
-
-  background-image:
-    linear-gradient(rgba(180, 0, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(180, 0, 255, 0.08) 1px, transparent 1px);
-
-  background-size: 60px 60px;
-
-  animation: moveGrid 12s linear infinite;
-}
-
-@keyframes moveGrid {
-  from {
-    transform: translate(0, 0);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  to {
-    transform: translate(-60px, -60px);
+  
+  html,
+  body,
+  #root {
+    min-height: 100%;
   }
-}
-
-/* Orbs */
-
-.orb {
-  position: fixed;
-  width: 300px;
-  height: 300px;
-
-  background: radial-gradient(
-    circle,
-    rgba(180, 0, 255, 0.25),
-    transparent 60%
-  );
-
-  border-radius: 50%;
-  filter: blur(20px);
-  z-index: -1;
-
-  animation: float 8s ease-in-out infinite;
-}
-
-.orb1 {
-  top: 10%;
-  left: 15%;
-}
-
-.orb2 {
-  top: 60%;
-  left: 70%;
-  animation-delay: 2s;
-}
-
-.orb3 {
-  top: 30%;
-  left: 50%;
-  animation-delay: 4s;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: .6;
+  
+  body {
+    background: #050010;
+    color: white;
+    font-family: sans-serif;
   }
-
-  50% {
-    transform: translateY(-40px) scale(1.2);
-    opacity: 1;
+  .grid {
+    position: absolute;
+    inset: 0;
   }
+  .background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    background:#050010;
+    z-index:-10;
+}
 
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: .6;
-  }
+
+/* =======================
+   Animated Gradient
+======================= */
+
+.gradient{
+
+    position:absolute;
+    inset:-30%;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(175,0,255,.18),transparent 35%),
+    radial-gradient(circle at 80% 25%,rgba(0,180,255,.12),transparent 35%),
+    radial-gradient(circle at 60% 80%,rgba(255,0,150,.12),transparent 35%);
+    animation:gradientMove 20s ease-in-out infinite alternate;
+}
+
+@keyframes gradientMove{
+
+    0%{
+
+        transform:translate(-5%,-5%) scale(1);
+    }
+
+    100%{
+
+        transform:translate(5%,5%) scale(1.2);
+    }
+}
+
+/* =======================
+        Grid
+======================= */
+
+.grid::before{
+
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+
+background-image:
+linear-gradient(rgba(180,0,255,.07) 1px,transparent 1px),
+linear-gradient(90deg,rgba(180,0,255,.07) 1px,transparent 1px);
+
+background-size:60px 60px;
+
+animation:gridMove 18s linear infinite;
+
+}
+
+@keyframes gridMove{
+
+to{
+
+transform:translate(-60px,-60px);
+
+}
+
+}
+
+/* =======================
+        Orbs
+======================= */
+
+.orb{
+
+position:absolute;
+width:350px;
+height:350px;
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(180,0,255,.28),
+transparent 70%);
+
+filter:blur(40px);
+
+}
+
+.orb1{
+
+top:5%;
+left:10%;
+animation:move1 25s infinite alternate ease-in-out;
+
+}
+
+.orb2{
+
+top:65%;
+left:70%;
+animation:move2 30s infinite alternate ease-in-out;
+
+}
+
+.orb3{
+
+top:35%;
+left:45%;
+animation:move3 28s infinite alternate ease-in-out;
+
+}
+
+.orb4{
+
+top:70%;
+left:15%;
+animation:move4 35s infinite alternate ease-in-out;
+
+}
+
+/* random paths */
+
+@keyframes move1{
+
+0%{transform:translate(0,0);}
+25%{transform:translate(350px,-150px);}
+50%{transform:translate(650px,250px);}
+75%{transform:translate(-180px,350px);}
+100%{transform:translate(250px,-250px);}
+
+}
+
+@keyframes move2{
+
+0%{transform:translate(0,0);}
+25%{transform:translate(-500px,-200px);}
+50%{transform:translate(-200px,280px);}
+75%{transform:translate(250px,-150px);}
+100%{transform:translate(-350px,220px);}
+
+}
+
+@keyframes move3{
+
+0%{transform:translate(0,0);}
+25%{transform:translate(200px,350px);}
+50%{transform:translate(-350px,-250px);}
+75%{transform:translate(500px,100px);}
+100%{transform:translate(-250px,-300px);}
+
+}
+
+@keyframes move4{
+
+0%{transform:translate(0,0);}
+25%{transform:translate(450px,-300px);}
+50%{transform:translate(150px,-100px);}
+75%{transform:translate(-350px,-350px);}
+100%{transform:translate(300px,100px);}
+
+}
+
+/* =======================
+        Stars
+======================= */
+
+.stars{
+
+position:absolute;
+inset:0;
+
+}
+
+.star{
+
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+
+animation:twinkle infinite ease-in-out;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.15;
+transform:scale(.5);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(2);
+
+}
+
 }
