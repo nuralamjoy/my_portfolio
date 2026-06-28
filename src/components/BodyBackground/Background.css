@@ -1,0 +1,85 @@
+/* Main Background */
+body {
+  background: #050010;
+  overflow-x: hidden;
+}
+
+/* Moving Grid */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  width: 200%;
+  height: 200%;
+  z-index: -2;
+
+  background-image:
+    linear-gradient(rgba(180, 0, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 0, 255, 0.08) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+
+  animation: moveGrid 12s linear infinite;
+}
+
+@keyframes moveGrid {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-60px, -60px);
+  }
+}
+
+/* Orbs */
+
+.orb {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+
+  background: radial-gradient(
+    circle,
+    rgba(180, 0, 255, 0.25),
+    transparent 60%
+  );
+
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: -1;
+
+  animation: float 8s ease-in-out infinite;
+}
+
+.orb1 {
+  top: 10%;
+  left: 15%;
+}
+
+.orb2 {
+  top: 60%;
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.orb3 {
+  top: 30%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: .6;
+  }
+
+  50% {
+    transform: translateY(-40px) scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: .6;
+  }
+}
