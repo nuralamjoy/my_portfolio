@@ -4,9 +4,9 @@ import Nav from './components/Header/Nav'
 const App = () => {
   return (
     <>
-      <Nav></Nav>
-      
-      
+      <div>
+        <Nav></Nav>
+      </div>
     </>
   );
 }
