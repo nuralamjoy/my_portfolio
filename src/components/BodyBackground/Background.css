@@ -1,63 +1,63 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html,
-  body,
-  #root {
-    min-height: 100%;
-  }
-  
-  body {
-    background: #050010;
-    color: white;
-    font-family: sans-serif;
-  }
-  .grid {
-    position: absolute;
-    inset: 0;
-  }
-  .background{
-    position:fixed;
-    inset:0;
-    overflow:hidden;
-    background:#050010;
-    z-index:-10;
+  /* margin: 0; */
+  /* padding: 0; */
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: #050010;
+  color: white;
+  font-family: sans-serif;
+}
+.grid {
+  position: absolute;
+  inset: 0;
+}
+.background{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  background:#050010;
+  z-index:-110;
 }
 
 
 /* =======================
-   Animated Gradient
+ Animated Gradient
 ======================= */
 
 .gradient{
 
-    position:absolute;
-    inset:-30%;
-    background:
-    radial-gradient(circle at 20% 20%,rgba(175,0,255,.18),transparent 35%),
-    radial-gradient(circle at 80% 25%,rgba(0,180,255,.12),transparent 35%),
-    radial-gradient(circle at 60% 80%,rgba(255,0,150,.12),transparent 35%);
-    animation:gradientMove 20s ease-in-out infinite alternate;
+  position:absolute;
+  inset:-30%;
+  background:
+  radial-gradient(circle at 20% 20%,rgba(175,0,255,.18),transparent 35%),
+  radial-gradient(circle at 80% 25%,rgba(0,180,255,.12),transparent 35%),
+  radial-gradient(circle at 60% 80%,rgba(255,0,150,.12),transparent 35%);
+  animation:gradientMove 20s ease-in-out infinite alternate;
 }
 
 @keyframes gradientMove{
 
-    0%{
+  0%{
 
-        transform:translate(-5%,-5%) scale(1);
-    }
+      transform:translate(-5%,-5%) scale(1);
+  }
 
-    100%{
+  100%{
 
-        transform:translate(5%,5%) scale(1.2);
-    }
+      transform:translate(5%,5%) scale(1.2);
+  }
 }
 
 /* =======================
-        Grid
+      Grid
 ======================= */
 
 .grid::before{
@@ -88,7 +88,7 @@ transform:translate(-60px,-60px);
 }
 
 /* =======================
-        Orbs
+      Orbs
 ======================= */
 
 .orb{
@@ -181,7 +181,7 @@ animation:move4 35s infinite alternate ease-in-out;
 }
 
 /* ========================
-        Stars
+      Stars
 ======================= */
 
 .stars{
