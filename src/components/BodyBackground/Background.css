@@ -73,7 +73,7 @@ linear-gradient(90deg,rgba(180,0,255,.07) 1px,transparent 1px);
 
 background-size:60px 60px;
 
-animation:gridMove 18s linear infinite;
+animation:gridMove 7s linear infinite;
 
 }
 
@@ -184,39 +184,3 @@ animation:move4 35s infinite alternate ease-in-out;
       Stars
 ======================= */
 
-.stars{
-
-position:absolute;
-inset:0;
-
-}
-
-.star{
-
-position:absolute;
-width:2px;
-height:2px;
-background:white;
-border-radius:50%;
-
-animation:twinkle infinite ease-in-out;
-
-}
-
-@keyframes twinkle{
-
-0%,100%{
-
-opacity:.15;
-transform:scale(.5);
-
-}
-
-50%{
-
-opacity:1;
-transform:scale(2);
-
-}
-
-}
