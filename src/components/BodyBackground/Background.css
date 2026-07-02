@@ -1,389 +1,381 @@
-*{
-  box-sizing:border-box;
-  }
-  
-  html,
-  body,
-  #root{
-  min-height:100%;
-  }
-  
-  body{
-  background:#03020d;
-  overflow-x:hidden;
-  font-family:sans-serif;
-  }
-  
-  .background{
-  position:fixed;
-  inset:0;
-  overflow:hidden;
-  background:#04000f;
-  z-index:-999;
-  }
-  
-  /* =========================
-  Aurora Gradient
-  ========================= */
-  
-  .aurora{
-  
-  position:absolute;
-  inset:-40%;
-  
-  background:
-  
-  radial-gradient(circle at 15% 20%,
-  rgba(140,0,255,.22),
-  transparent 35%),
-  
-  radial-gradient(circle at 80% 25%,
-  rgba(0,200,255,.18),
-  transparent 35%),
-  
-  radial-gradient(circle at 60% 80%,
-  rgba(255,0,170,.18),
-  transparent 35%),
-  
-  radial-gradient(circle at 30% 70%,
-  rgba(0,255,170,.14),
-  transparent 35%);
-  
-  filter:blur(60px);
-  
-  animation:auroraMove 25s ease infinite alternate;
-  
-  }
-  
-  @keyframes auroraMove{
-  
-  0%{
-  
-  transform:translate(-5%,-5%) scale(1);
-  
-  }
-  
-  100%{
-  
-  transform:translate(8%,8%) scale(1.25);
-  
-  }
-  
-  }
-  
-  /* =========================
-  Perspective Grid
-  ========================= */
-  
-  .grid{
-  
-  position:absolute;
-  inset:0;
-  perspective:900px;
-  
-  }
-  
-  .grid::before{
-  
-  content:"";
-  
-  position:absolute;
-  
-  left:-50%;
-  top:-50%;
-  
-  width:200%;
-  height:200%;
-  
-  background-image:
-  
-  linear-gradient(rgba(130,80,255,.08) 1px,transparent 1px),
-  
-  linear-gradient(90deg,rgba(130,80,255,.08) 1px,transparent 1px);
-  
-  background-size:70px 70px;
-  
-  transform:
-  
-  rotateX(75deg)
-  translateY(-10%);
-  
-  animation:gridMove 15s linear infinite;
-  
-  }
-  
-  @keyframes gridMove{
-  
-  0%{
-  
-  transform:
-  
-  rotateX(75deg)
-  translateY(0);
-  
-  }
-  
-  100%{
-  
-  transform:
-  
-  rotateX(75deg)
-  translateY(70px);
-  
-  }
-  
-  }
-  
-  /* =========================
-  Floating Orbs
-  ========================= */
-  
-  .orb{
-  
-  position:absolute;
-  
-  border-radius:50%;
-  
-  filter:blur(50px);
-  
-  opacity:.8;
-  
-  mix-blend-mode:screen;
-  
-  }
-  
-  .orb1{
-  
-  width:420px;
-  height:420px;
-  
-  background:#7c3aed;
-  
-  top:5%;
-  left:5%;
-  
-  animation:float1 22s infinite alternate ease-in-out;
-  
-  }
-  
-  .orb2{
-  
-  width:300px;
-  height:300px;
-  
-  background:#06b6d4;
-  
-  top:60%;
-  left:75%;
-  
-  animation:float2 26s infinite alternate ease-in-out;
-  
-  }
-  
-  .orb3{
-  
-  width:260px;
-  height:260px;
-  
-  background:#ec4899;
-  
-  top:20%;
-  left:55%;
-  
-  animation:float3 28s infinite alternate;
-  
-  }
-  
-  .orb4{
-  
-  width:380px;
-  height:380px;
-  
-  background:#14f195;
-  
-  top:70%;
-  left:20%;
-  
-  animation:float4 32s infinite alternate;
-  
-  }
-  
-  .orb5{
-  
-  width:180px;
-  height:180px;
-  
-  background:#9333ea;
-  
-  top:35%;
-  left:82%;
-  
-  animation:float5 20s infinite alternate;
-  
-  }
-  
-  .orb6{
-  
-  width:200px;
-  height:200px;
-  
-  background:#38bdf8;
-  
-  top:80%;
-  left:55%;
-  
-  animation:float6 27s infinite alternate;
-  
-  }
-  
-  .orb7{
-  
-  width:160px;
-  height:160px;
-  
-  background:#ff4ecd;
-  
-  top:8%;
-  left:78%;
-  
-  animation:float7 25s infinite alternate;
-  
-  }
-  
-  .orb8{
-  
-  width:260px;
-  height:260px;
-  
-  background:#8b5cf6;
-  
-  top:55%;
-  left:5%;
-  
-  animation:float8 30s infinite alternate;
-  
-  }
-  
-  /* =========================
-  Light Glow
-  ========================= */
-  
-  .light{
-  
-  position:absolute;
-  
-  width:900px;
-  height:900px;
-  
-  left:50%;
-  top:50%;
-  
-  transform:translate(-50%,-50%);
-  
-  border-radius:50%;
-  
-  background:radial-gradient(circle,
-  rgba(255,255,255,.05),
-  transparent 70%);
-  
-  animation:rotateLight 45s linear infinite;
-  
-  }
-  
-  @keyframes rotateLight{
-  
-  to{
-  
-  transform:
-  translate(-50%,-50%)
-  rotate(360deg);
-  
-  }
-  
-  }
-  
+/* ==========================================================
+   PREMIUM FUTURISTIC BACKGROUND
+   Part 2
+   Base + Aurora + Ambient + Noise + Vignette
+========================================================== */
 
-  
-  /* =========================
-  Vignette
-  ========================= */
-  
-  .vignette{
-  
-  position:absolute;
-  inset:0;
-  
-  box-shadow:
-  inset 0 0 250px rgba(0,0,0,.75);
-  
-  pointer-events:none;
-  
+.background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  background: #050010;
+}
+
+/* ==========================================================
+   Base Gradient
+========================================================== */
+
+.bg-base {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 50% 20%,
+      rgba(115, 70, 255, .08),
+      transparent 45%),
+
+    radial-gradient(circle at 80% 80%,
+      rgba(0, 170, 255, .05),
+      transparent 40%),
+
+    radial-gradient(circle at 10% 90%,
+      rgba(120, 60, 255, .06),
+      transparent 40%),
+
+    linear-gradient(
+      180deg,
+      #070014 0%,
+      #050010 55%,
+      #020007 100%
+    );
+}
+
+/* ==========================================================
+   Aurora
+========================================================== */
+
+.aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(130px);
+  mix-blend-mode: screen;
+  opacity: .28;
+  will-change: transform;
+}
+
+/* Purple */
+
+.aurora1 {
+
+  width: 900px;
+  height: 900px;
+
+  top: -250px;
+  left: -180px;
+
+  background:
+    radial-gradient(circle,
+      rgba(145,90,255,.9),
+      rgba(145,90,255,.35),
+      transparent 70%);
+
+  animation:
+    auroraOne 34s ease-in-out infinite alternate;
+}
+
+/* Cyan */
+
+.aurora2 {
+
+  width: 850px;
+  height: 850px;
+
+  right: -180px;
+  top: -150px;
+
+  background:
+    radial-gradient(circle,
+      rgba(0,220,255,.85),
+      rgba(0,180,255,.28),
+      transparent 70%);
+
+  animation:
+    auroraTwo 42s ease-in-out infinite alternate;
+}
+
+/* Blue */
+
+.aurora3 {
+
+  width: 760px;
+  height: 760px;
+
+  left: 25%;
+  bottom: -280px;
+
+  background:
+    radial-gradient(circle,
+      rgba(90,120,255,.75),
+      rgba(70,110,255,.22),
+      transparent 70%);
+
+  animation:
+    auroraThree 38s ease-in-out infinite alternate;
+}
+
+/* ==========================================================
+   Ambient Lighting
+========================================================== */
+
+.ambient {
+
+  position: absolute;
+
+  width: 170%;
+  height: 170%;
+
+  left: -35%;
+  top: -35%;
+
+  opacity: .10;
+
+  filter: blur(90px);
+
+  mix-blend-mode: screen;
+
+  will-change: transform;
+}
+
+.ambient1 {
+
+  background:
+
+    conic-gradient(
+
+      from 0deg,
+
+      transparent,
+
+      rgba(130,90,255,.18),
+
+      transparent,
+
+      rgba(0,180,255,.12),
+
+      transparent
+
+    );
+
+  animation:
+    rotateAmbient 80s linear infinite;
+}
+
+.ambient2 {
+
+  background:
+
+    conic-gradient(
+
+      from 180deg,
+
+      transparent,
+
+      rgba(0,180,255,.14),
+
+      transparent,
+
+      rgba(140,70,255,.18),
+
+      transparent
+
+    );
+
+  animation:
+    rotateAmbientReverse 120s linear infinite;
+}
+
+/* ==========================================================
+   Film Noise
+========================================================== */
+
+.noise {
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: .03;
+
+  background-image:
+
+    radial-gradient(#ffffff 0.5px, transparent 0.5px);
+
+  background-size: 7px 7px;
+
+  animation:
+    noiseMove 10s linear infinite;
+}
+
+/* ==========================================================
+   Edge Vignette
+========================================================== */
+
+.vignette {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    radial-gradient(
+
+      ellipse at center,
+
+      transparent 45%,
+
+      rgba(0,0,0,.15) 70%,
+
+      rgba(0,0,0,.45) 100%
+
+    );
+}
+
+/* ==========================================================
+   Aurora Animations
+========================================================== */
+
+@keyframes auroraOne {
+
+  0% {
+
+    transform:
+      translate(0,0)
+      rotate(0deg)
+      scale(1);
+
   }
-  
-  /* =========================
-  Animations
-  ========================= */
-  
-  @keyframes float1{
-  
-  100%{
-  transform:translate(100px,150px);
+
+  50% {
+
+    transform:
+      translate(80px,-50px)
+      rotate(8deg)
+      scale(1.08);
+
   }
-  
+
+  100% {
+
+    transform:
+      translate(-40px,60px)
+      rotate(-8deg)
+      scale(.96);
+
   }
-  
-  @keyframes float2{
-  
-  100%{
-  transform:translate(-120px,-150px);
+
+}
+
+@keyframes auroraTwo {
+
+  0% {
+
+    transform:
+      translate(0,0)
+      rotate(0deg)
+      scale(1);
+
   }
-  
+
+  100% {
+
+    transform:
+      translate(-120px,80px)
+      rotate(10deg)
+      scale(1.08);
+
   }
-  
-  @keyframes float3{
-  
-  100%{
-  transform:translate(150px,120px);
+
+}
+
+@keyframes auroraThree {
+
+  0% {
+
+    transform:
+      translate(0,0)
+      scale(1);
+
   }
-  
+
+  50% {
+
+    transform:
+      translate(-90px,-50px)
+      scale(1.1);
+
   }
-  
-  @keyframes float4{
-  
-  100%{
-  transform:translate(-150px,-100px);
+
+  100% {
+
+    transform:
+      translate(70px,50px)
+      scale(.95);
+
   }
-  
+
+}
+
+/* ==========================================================
+   Ambient Rotation
+========================================================== */
+
+@keyframes rotateAmbient {
+
+  from {
+
+    transform:
+      rotate(0deg);
+
   }
-  
-  @keyframes float5{
-  
-  100%{
-  transform:translate(-150px,250px);
+
+  to {
+
+    transform:
+      rotate(360deg);
+
   }
-  
+
+}
+
+@keyframes rotateAmbientReverse {
+
+  from {
+
+    transform:
+      rotate(360deg);
+
   }
-  
-  @keyframes float6{
-  
-  100%{
-  transform:translate(150px,-100px);
+
+  to {
+
+    transform:
+      rotate(0deg);
+
   }
-  
+
+}
+
+/* ==========================================================
+   Noise
+========================================================== */
+
+@keyframes noiseMove {
+
+  from {
+
+    transform:
+      translateY(0);
+
   }
-  
-  @keyframes float7{
-  
-  100%{
-  transform:translate(-100px,180px);
+
+  to {
+
+    transform:
+      translateY(-7px);
+
   }
-  
-  }
-  
-  @keyframes float8{
-  
-  100%{
-  transform:translate(100px,-120px);
-  }
-  
-  }
+
+}
