@@ -3,26 +3,48 @@ import "./Background.css";
 export default function Background() {
   return (
     <div className="background">
-      <div className="aurora"></div>
+      {/* ===================== */}
+      {/* Base Background */}
+      {/* ===================== */}
+      <div className="bg-base"></div>
 
-      <div className="grid"></div>
+      {/* ===================== */}
+      {/* Aurora */}
+      {/* ===================== */}
+      <div className="aurora aurora1"></div>
+      <div className="aurora aurora2"></div>
+      <div className="aurora aurora3"></div>
 
-      <div className="noise"></div>
+      {/* ===================== */}
+      {/* Ambient Lighting */}
+      {/* ===================== */}
+      <div className="ambient ambient1"></div>
+      <div className="ambient ambient2"></div>
 
-      <div className="vignette"></div>
+      {/* ===================== */}
+      {/* Perspective Grid */}
+      {/* ===================== */}
+      <div className="grid-wrapper">
+        <div className="grid"></div>
+      </div>
 
-      <div className="light"></div>
-
-      <div className="particles"></div>
-
+      {/* ===================== */}
+      {/* Glow Orbs */}
+      {/* ===================== */}
       <div className="orb orb1"></div>
       <div className="orb orb2"></div>
       <div className="orb orb3"></div>
       <div className="orb orb4"></div>
-      <div className="orb orb5"></div>
-      <div className="orb orb6"></div>
-      <div className="orb orb7"></div>
-      <div className="orb orb8"></div>
+
+      {/* ===================== */}
+      {/* Noise */}
+      {/* ===================== */}
+      <div className="noise"></div>
+
+      {/* ===================== */}
+      {/* Vignette */}
+      {/* ===================== */}
+      <div className="vignette"></div>
     </div>
   );
 }

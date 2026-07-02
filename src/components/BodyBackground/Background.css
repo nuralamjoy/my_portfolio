@@ -302,20 +302,7 @@
   
   }
   
-  /* =========================
-  Noise
-  ========================= */
-  
-  .noise{
-  
-  position:absolute;
-  inset:0;
-  
-  opacity:.05;
-  
-  background-image:url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  
-  }
+
   
   /* =========================
   Vignette
@@ -340,7 +327,7 @@
   @keyframes float1{
   
   100%{
-  transform:translate(500px,250px);
+  transform:translate(100px,150px);
   }
   
   }
@@ -348,7 +335,7 @@
   @keyframes float2{
   
   100%{
-  transform:translate(-420px,-250px);
+  transform:translate(-120px,-150px);
   }
   
   }
@@ -356,7 +343,7 @@
   @keyframes float3{
   
   100%{
-  transform:translate(350px,320px);
+  transform:translate(150px,120px);
   }
   
   }
@@ -364,7 +351,7 @@
   @keyframes float4{
   
   100%{
-  transform:translate(-350px,-300px);
+  transform:translate(-150px,-100px);
   }
   
   }
@@ -372,7 +359,7 @@
   @keyframes float5{
   
   100%{
-  transform:translate(-250px,250px);
+  transform:translate(-150px,250px);
   }
   
   }
@@ -380,7 +367,7 @@
   @keyframes float6{
   
   100%{
-  transform:translate(250px,-300px);
+  transform:translate(150px,-100px);
   }
   
   }
@@ -388,7 +375,7 @@
   @keyframes float7{
   
   100%{
-  transform:translate(-300px,180px);
+  transform:translate(-100px,180px);
   }
   
   }
@@ -396,7 +383,7 @@
   @keyframes float8{
   
   100%{
-  transform:translate(300px,-220px);
+  transform:translate(100px,-120px);
   }
   
   }
