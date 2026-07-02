@@ -379,3 +379,291 @@
   }
 
 }
+
+/* ==========================================================
+   PART 3
+   3D Perspective Infinite Grid
+========================================================== */
+
+.grid-wrapper {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  perspective: 900px;
+  perspective-origin: 50% 22%;
+}
+
+/* Horizon Fade */
+
+.grid-wrapper::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+
+      rgba(5,0,16,.98) 0%,
+      rgba(5,0,16,.82) 18%,
+      rgba(5,0,16,.35) 36%,
+      transparent 52%
+    );
+
+  z-index: 3;
+}
+
+/* Bottom Glow */
+
+.grid-wrapper::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 35%;
+
+  background:
+
+    radial-gradient(
+
+      ellipse at bottom,
+
+      rgba(120,80,255,.10),
+
+      rgba(0,180,255,.05),
+
+      transparent 75%
+
+    );
+
+  filter: blur(60px);
+
+  z-index: 1;
+}
+
+/* ==========================================================
+   Perspective Grid
+========================================================== */
+
+.grid {
+
+  position: absolute;
+
+  left: -40%;
+  top: -130%;
+
+  width: 180%;
+  height: 320%;
+
+  transform-origin: center;
+
+  transform:
+
+    rotateX(78deg)
+    translateZ(0);
+
+  will-change: transform;
+
+  opacity: .45;
+
+  background-image:
+
+    /* Vertical */
+
+    repeating-linear-gradient(
+
+      90deg,
+
+      rgba(120,180,255,.18) 0px,
+
+      rgba(120,180,255,.18) 1px,
+
+      transparent 1px,
+
+      transparent 90px
+
+    ),
+
+    /* Horizontal */
+
+    repeating-linear-gradient(
+
+      180deg,
+
+      rgba(160,100,255,.14) 0px,
+
+      rgba(160,100,255,.14) 1px,
+
+      transparent 1px,
+
+      transparent 90px
+
+    );
+
+  background-size:
+
+    90px 90px,
+    90px 90px;
+
+  filter:
+
+    drop-shadow(0 0 6px rgba(0,180,255,.10))
+    drop-shadow(0 0 12px rgba(120,90,255,.08));
+
+  animation:
+
+    gridMove 12s linear infinite;
+}
+
+/* ==========================================================
+   Extra Grid Glow
+========================================================== */
+
+.grid::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    linear-gradient(
+
+      to bottom,
+
+      transparent,
+
+      rgba(255,255,255,.05),
+
+      transparent
+
+    );
+
+  mix-blend-mode: screen;
+}
+
+/* ==========================================================
+   Horizon Light
+========================================================== */
+
+.grid::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 35%;
+
+  background:
+
+    linear-gradient(
+
+      to bottom,
+
+      rgba(0,200,255,.12),
+
+      rgba(130,80,255,.05),
+
+      transparent
+
+    );
+
+  filter: blur(45px);
+}
+
+/* ==========================================================
+   Infinite Movement
+========================================================== */
+
+@keyframes gridMove {
+
+  from {
+
+    background-position:
+
+      0 0,
+      0 0;
+
+  }
+
+  to {
+
+    background-position:
+
+      0 90px,
+      0 90px;
+
+  }
+
+}
+
+/* ==========================================================
+   Small Screens
+========================================================== */
+
+@media (max-width:900px){
+
+.grid{
+
+    width:220%;
+    height:340%;
+
+    left:-60%;
+    top:-145%;
+
+    background-size:
+
+        70px 70px,
+        70px 70px;
+
+    background-image:
+
+        repeating-linear-gradient(
+            90deg,
+            rgba(120,180,255,.16) 0,
+            rgba(120,180,255,.16) 1px,
+            transparent 1px,
+            transparent 70px
+        ),
+
+        repeating-linear-gradient(
+            180deg,
+            rgba(160,100,255,.13) 0,
+            rgba(160,100,255,.13) 1px,
+            transparent 1px,
+            transparent 70px
+        );
+}
+
+}
+
+@media (max-width:600px){
+
+.grid{
+
+    transform:rotateX(80deg);
+
+    opacity:.35;
+
+    background-size:
+
+        55px 55px,
+        55px 55px;
+
+}
+
+}
