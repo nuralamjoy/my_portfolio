@@ -667,3 +667,310 @@
 }
 
 }
+
+/* ==========================================================
+   PART 4
+   Floating Glow Orbs
+========================================================== */
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  mix-blend-mode: screen;
+  opacity: .22;
+  will-change: transform;
+}
+
+/* -----------------------------
+   Top Left
+------------------------------*/
+
+.orb1 {
+
+  width: 220px;
+  height: 220px;
+
+  top: 12%;
+  left: 8%;
+
+  background:
+    radial-gradient(circle,
+      rgba(170,100,255,.9),
+      rgba(170,100,255,.25),
+      transparent 72%);
+
+  animation: orbOne 24s ease-in-out infinite alternate;
+}
+
+/* -----------------------------
+   Top Right
+------------------------------*/
+
+.orb2 {
+
+  width: 260px;
+  height: 260px;
+
+  top: 18%;
+  right: 10%;
+
+  background:
+    radial-gradient(circle,
+      rgba(0,220,255,.9),
+      rgba(0,220,255,.22),
+      transparent 72%);
+
+  animation: orbTwo 28s ease-in-out infinite alternate;
+}
+
+/* -----------------------------
+   Center Left
+------------------------------*/
+
+.orb3 {
+
+  width: 190px;
+  height: 190px;
+
+  left: 26%;
+  bottom: 18%;
+
+  background:
+    radial-gradient(circle,
+      rgba(120,120,255,.85),
+      rgba(120,120,255,.20),
+      transparent 70%);
+
+  animation: orbThree 32s ease-in-out infinite alternate;
+}
+
+/* -----------------------------
+   Bottom Right
+------------------------------*/
+
+.orb4 {
+
+  width: 250px;
+  height: 250px;
+
+  right: 12%;
+  bottom: 8%;
+
+  background:
+    radial-gradient(circle,
+      rgba(150,90,255,.85),
+      rgba(150,90,255,.18),
+      transparent 72%);
+
+  animation: orbFour 36s ease-in-out infinite alternate;
+}
+
+/* ==========================================================
+   Orb Animations
+========================================================== */
+
+@keyframes orbOne {
+
+  0%{
+      transform:
+      translate(0px,0px)
+      scale(1);
+  }
+
+  50%{
+      transform:
+      translate(45px,-35px)
+      scale(1.06);
+  }
+
+  100%{
+      transform:
+      translate(-30px,30px)
+      scale(.96);
+  }
+
+}
+
+@keyframes orbTwo {
+
+  0%{
+      transform:
+      translate(0,0)
+      scale(1);
+  }
+
+  100%{
+      transform:
+      translate(-40px,45px)
+      scale(1.08);
+  }
+
+}
+
+@keyframes orbThree {
+
+  0%{
+      transform:
+      translate(0,0)
+      scale(1);
+  }
+
+  50%{
+      transform:
+      translate(30px,-40px)
+      scale(1.05);
+  }
+
+  100%{
+      transform:
+      translate(-35px,25px)
+      scale(.95);
+  }
+
+}
+
+@keyframes orbFour {
+
+  0%{
+      transform:
+      translate(0,0)
+      scale(1);
+  }
+
+  100%{
+      transform:
+      translate(-45px,-30px)
+      scale(1.05);
+  }
+
+}
+
+/* ==========================================================
+   Performance
+========================================================== */
+
+.background * {
+
+    transform: translateZ(0);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width:900px){
+
+.orb{
+
+    filter:blur(60px);
+
+}
+
+.orb1{
+
+    width:180px;
+    height:180px;
+
+}
+
+.orb2{
+
+    width:190px;
+    height:190px;
+
+}
+
+.orb3{
+
+    width:170px;
+    height:170px;
+
+}
+
+.orb4{
+
+    width:180px;
+    height:180px;
+
+}
+
+}
+
+@media (max-width:600px){
+
+.orb{
+
+    filter:blur(45px);
+
+    opacity:.18;
+
+}
+
+.orb1{
+
+    width:130px;
+    height:130px;
+
+    top:8%;
+    left:4%;
+
+}
+
+.orb2{
+
+    width:150px;
+    height:150px;
+
+    top:16%;
+    right:2%;
+
+}
+
+.orb3{
+
+    width:120px;
+    height:120px;
+
+    left:10%;
+    bottom:22%;
+
+}
+
+.orb4{
+
+    width:140px;
+    height:140px;
+
+    right:4%;
+    bottom:8%;
+
+}
+
+}
+
+/* ==========================================================
+   Reduce Motion Accessibility
+========================================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+.aurora,
+.orb,
+.grid,
+.ambient{
+
+    animation:none !important;
+
+}
+
+}
+
+/* ==========================================================
+   THE END
+========================================================== */
