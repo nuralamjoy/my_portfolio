@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
     
-      {/* <Background></Background> */}
+      <Background></Background>
         <Nav></Nav>
       
     </>
