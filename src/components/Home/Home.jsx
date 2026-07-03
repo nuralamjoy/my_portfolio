@@ -4,7 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <section className="home" id="home">
+    <section className="home" id="home" className=" mt-[80px] ">
       <div className="home-container">
         {/* Left Side */}
         <div className="hero-left">
