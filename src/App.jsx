@@ -8,7 +8,6 @@ import Home from './components/Home/Home';
 const App = () => {
   return (
     <>
-    
       <Background></Background>
       <Nav></Nav>
       <Home></Home>

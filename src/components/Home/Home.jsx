@@ -1,5 +1,6 @@
 import "./Home.css";
-import { GithubIcon, Linkedin, Mail, ArrowRight, Code2 } from "lucide-react";
+import { Mail, ArrowRight, Code2 } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -38,29 +39,27 @@ export default function Home() {
           </div>
 
           <div className="hero-socials">
-            <a href="#">
-              <GithubIcon size={20} />
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={20} />
             </a>
 
-            <a href="#">
-              <Linkedin size={20} />
-            </a>
-
-            <a href="#">
+            <a href="mailto:your@email.com">
               <Mail size={20} />
             </a>
           </div>
         </div>
 
         {/* Right Side */}
-
         <div className="hero-right">
           <div className="hero-circle">
             <div className="circle-border"></div>
 
             <div className="profile-card">
               <Code2 size={80} />
-
               <h2>NAJ</h2>
             </div>
 
