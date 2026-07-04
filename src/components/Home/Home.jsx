@@ -84,8 +84,8 @@ export default function Home() {
             </div>
             <h1 className="hero-name">
               <span>Nur Alam</span>
-              <br />
-              <span className="gn">Joy</span>
+              
+              <span className="gn"> Joy</span>
             </h1>
             <div className="hero-type">
               <span>{typedText}</span>

@@ -387,16 +387,21 @@ body {
     width: 260px;
     height: 260px;
     margin: 0 auto;
+    z-index: -11111111;
   }
   .av-main {
     width: 260px;
     height: 260px;
+    
+    background-color: red;
   }
   .av-initials {
     font-size: 4.5rem;
+    
   }
   .chip {
     font-size: 0.65rem;
     padding: 0.4rem 0.7rem;
+    
   }
 }
