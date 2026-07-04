@@ -10,7 +10,7 @@ export default function Home() {
         <div className="hero-left">
           <div className="hero-badge">🏆 ICPC Asia Dhaka Regional Finalist</div>
 
-          <h1 className="hero-title">
+          <h1 className="hero-title text-amber-100 ">
             Hi, I'm
             <br />
             <span>Nur Alam Joy</span>
