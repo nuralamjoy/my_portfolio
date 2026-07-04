@@ -349,6 +349,7 @@ body {
   color: var(--p3);
   white-space: nowrap;
   box-shadow: 0 4px 18px var(--glow2);
+  z-index: 111111;
 }
 [data-theme="light"] .chip {
   background: rgba(240, 235, 255, 0.92);
