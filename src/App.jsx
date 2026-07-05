@@ -81,7 +81,7 @@ export default function App() {
       <ScrollProgress progress={progress} />
       <ParticleCanvas />
       
-      <Background></Background>
+      {/* <Background></Background> */}
 
       <Toast message={toastMsg} show={toastShow} />
 
