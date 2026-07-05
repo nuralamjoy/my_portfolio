@@ -34,7 +34,7 @@
   height: 100vh;
   overflow: hidden;
   background: var(--c-bg);
-  z-index: -1;
+  z-index: -1111111;
   pointer-events: none;
   isolation: isolate; /* keeps blend-modes contained to this layer */
 }

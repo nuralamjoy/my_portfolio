@@ -6,6 +6,7 @@ import Nav from "./components/Header/Nav.jsx";
 import Background from "./components/BodyBackground/Background.jsx"
 import Home from "./components/Home/Home.jsx";
 import Toast from "./components/Toast/Toast.jsx";
+import About from "./components/About/About.jsx";
 
 
 const SECTION_IDS = [
@@ -94,6 +95,7 @@ export default function App() {
         onToggleTheme={() => setDark((d) => !d)}
       />
       <Home startTyping={startTyping} />
+      <About></About>
     </>
   );
 }
