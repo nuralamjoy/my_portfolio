@@ -5,6 +5,7 @@ import ParticleCanvas from "./components/ParticleCanvas/ParticleCanvas.jsx";
 import Nav from "./components/Header/Nav.jsx";
 import Background from "./components/BodyBackground/Background.jsx"
 import Toast from "./components/Toast/Toast.jsx";
+import Home from "./components/Home/Home.jsx";
 
 const SECTION_IDS = [
   "home",
@@ -91,7 +92,7 @@ export default function App() {
         dark={dark}
         onToggleTheme={() => setDark((d) => !d)}
       />
-
+       <Home></Home>
       
     </>
   );
