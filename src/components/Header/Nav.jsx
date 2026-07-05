@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Navbar.css";
+import "./Nav.css";
 
 const LINKS = [
   { href: "#home", label: "Home", icon: "🏠" },
@@ -18,7 +18,7 @@ const LINKS = [
   { href: "#contact", label: "Contact", icon: "📬" },
 ];
 
-export default function Navbar({
+export default function Nav({
   scrolled,
   activeSection,
   dark,
