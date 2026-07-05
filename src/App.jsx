@@ -75,14 +75,18 @@ export default function App() {
 const App = () => {
   return (
     <>
-      <Nav
+      <Loader out={loaderOut} />
+      <ScrollProgress progress={progress} />
+      <ParticleCanvas />
+      <Toast message={toastMsg} show={toastShow} />
+
+      <Navbar
         scrolled={scrolled}
         activeSection={activeSection}
         dark={dark}
         onToggleTheme={() => setDark((d) => !d)}
       />
-
-      {/* <Background></Background> */}
+      
     </>
   );
 };

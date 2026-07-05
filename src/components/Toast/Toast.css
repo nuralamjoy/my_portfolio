@@ -1,0 +1,21 @@
+#toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.9rem 1.4rem;
+    background: linear-gradient(135deg, var(--p1), var(--p2));
+    color: #fff;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    z-index: 9999;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 28px rgba(124, 58, 237, 0.5);
+  }
+  #toast.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
