@@ -3,7 +3,7 @@ import Loader from "./components/Loader/Loader.jsx";
 import ScrollProgress from "./components/ScrollProgress/ScrollProgress.jsx";
 import ParticleCanvas from "./components/ParticleCanvas/ParticleCanvas.jsx";
 import Nav from "./components/Header/Nav.jsx";
-
+import Background from "./components/BodyBackground/Background.jsx"
 import Toast from "./components/Toast/Toast.jsx";
 
 const SECTION_IDS = [
@@ -80,6 +80,9 @@ export default function App() {
       <Loader out={loaderOut} />
       <ScrollProgress progress={progress} />
       <ParticleCanvas />
+      
+      <Background></Background>
+
       <Toast message={toastMsg} show={toastShow} />
 
       <Nav
