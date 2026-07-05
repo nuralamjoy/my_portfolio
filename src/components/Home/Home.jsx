@@ -1,11 +1,13 @@
-import { useState, useEffect, useRef } from "react";
-import "./Home.css";
+import { useEffect, useState } from "react";
+import "./Hero.css";
 
-const ROLES = [
+const TITLES = [
+  "Computer Science Student",
   "Competitive Programmer",
-  "Software Engineer",
-  "AI/ML Research Enthusiast",
-  "Open Source Contributor",
+  "Research Enthusiast",
+  "ICPC Regional Finalist",
+  "Algorithm Designer",
+  "President of PUCC",
 ];
 
 const SOCIALS = [
@@ -18,77 +20,60 @@ const SOCIALS = [
   { href: "https://linkedin.com", label: "LI", title: "LinkedIn" },
 ];
 
-function useTypewriter(
-  words,
-  { typeSpeed = 65, deleteSpeed = 35, pause = 1400 } = {},
-) {
+export default function Hero({ startTyping }) {
   const [text, setText] = useState("");
-  const wordIndex = useRef(0);
-  const charIndex = useRef(0);
-  const deleting = useRef(false);
 
   useEffect(() => {
+    if (!startTyping) return;
+    let ti = 0;
+    let ci = 0;
+    let del = false;
     let timeoutId;
 
-    const tick = () => {
-      const current = words[wordIndex.current % words.length];
-      let delay;
-
-      if (!deleting.current) {
-        charIndex.current += 1;
-        setText(current.slice(0, charIndex.current));
-        if (charIndex.current === current.length) {
-          deleting.current = true;
-          delay = pause;
-        } else {
-          delay = typeSpeed;
+    function tick() {
+      const t = TITLES[ti];
+      if (del) {
+        ci--;
+        setText(t.slice(0, ci));
+        if (ci === 0) {
+          del = false;
+          ti = (ti + 1) % TITLES.length;
         }
+        timeoutId = setTimeout(tick, 48);
       } else {
-        charIndex.current -= 1;
-        setText(current.slice(0, charIndex.current));
-        if (charIndex.current === 0) {
-          deleting.current = false;
-          wordIndex.current += 1;
+        ci++;
+        setText(t.slice(0, ci));
+        if (ci === t.length) {
+          timeoutId = setTimeout(() => {
+            del = true;
+            tick();
+          }, 2200);
+          return;
         }
-        delay = deleteSpeed;
+        timeoutId = setTimeout(tick, 88);
       }
+    }
+    tick();
 
-      timeoutId = setTimeout(tick, delay);
-    };
-
-    timeoutId = setTimeout(tick, typeSpeed);
     return () => clearTimeout(timeoutId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  return text;
-}
-
-export default function Home() {
-  const typedText = useTypewriter(ROLES);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const raf = requestAnimationFrame(() => setVisible(true));
-    return () => cancelAnimationFrame(raf);
-  }, []);
+  }, [startTyping]);
 
   return (
     <section id="home">
       <div className="grid-ov"></div>
       <div className="wrap">
         <div className="hero-grid">
-          <div className={`hero-l fi ${visible ? "vis" : ""}`}>
+          <div className="hero-l fi vis">
             <div className="hero-badge">
               🏆 ICPC Asia Dhaka Regional Finalist
             </div>
             <h1 className="hero-name">
               <span>Nur Alam</span>
-              
+
               <span className="gn"> Joy</span>
             </h1>
             <div className="hero-type">
-              <span>{typedText}</span>
+              <span>{text}</span>
               <span className="cursor"></span>
             </div>
             <p className="hero-desc">
@@ -120,10 +105,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className={`hero-r fi ${visible ? "vis" : ""}`}
-            style={{ transitionDelay: "0.18s" }}
-          >
+          <div className="hero-r fi vis" style={{ transitionDelay: "0.18s" }}>
             <div className="av-wrap">
               <div className="av-ring1"></div>
               <div className="av-ring2"></div>
