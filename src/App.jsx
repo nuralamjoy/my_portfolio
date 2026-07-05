@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import React from "react";
-import "./App.css";
+import { useEffect, useRef, useState } from 'react'
+import Loader from './components/Loader/Loader.jsx'
+import ScrollProgress from './components/ScrollProgress/ScrollProgress.jsx'
+import ParticleCanvas from './components/ParticleCanvas/ParticleCanvas.jsx'
 
 import Nav from "./components/Header/Nav.jsx";
 import Background from "./components/BodyBackground/Background";
