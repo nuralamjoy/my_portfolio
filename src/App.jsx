@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import Background from './components/BodyBackground/Background';
+
 import Nav from "./components/Header/Nav.jsx";
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
         dark={dark}
         onToggleTheme={() => setDark((d) => !d)}
       /> */}
-      <Background></Background>
+      {/* <Background></Background> */}
       <Nav></Nav>
       
     </>
