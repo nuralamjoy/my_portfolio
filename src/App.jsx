@@ -1,11 +1,19 @@
 import React from 'react'
 import './App.css'
-
+import Background from './components/BodyBackground/Background';
+import Nav from "./components/Header/Nav.jsx";
 
 const App = () => {
   return (
     <>
-      <Nav
+      {/* <Nav
+        scrolled={scrolled}
+        activeSection={activeSection}
+        dark={dark}
+        onToggleTheme={() => setDark((d) => !d)}
+      /> */}
+      <Background></Background>
+      <Nav></Nav>
       
     </>
   );
