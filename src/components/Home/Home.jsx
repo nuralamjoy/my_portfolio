@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Hero.css";
+import "./Home.css";
 
 const TITLES = [
   "Computer Science Student",
@@ -20,7 +20,7 @@ const SOCIALS = [
   { href: "https://linkedin.com", label: "LI", title: "LinkedIn" },
 ];
 
-export default function Hero({ startTyping }) {
+export default function Home({ startTyping }) {
   const [text, setText] = useState("");
 
   useEffect(() => {
