@@ -136,17 +136,25 @@ HERO
 .about-me-root h1.hero-title {
   font-family: var(--display);
   font-weight: 700;
-  font-size: clamp(48px, 7.5vw, 92px);
+  font-size: 30px;
   line-height: 0.98;
   letter-spacing: -0.035em;
   margin-bottom: 26px;
+  /* background-color: #28c840; */
+  /* display: flex;
+  align-items: start; */
+  text-align: left;
 }
 
 .about-me-root .hero-desc {
   color: var(--muted);
-  font-size: 17px;
+  font-size: 16px;
   max-width: 520px;
   margin-bottom: 38px;
+  text-align: left;
+}
+.hero-desc p{
+  margin-bottom: 10px;
 }
 .about-me-root .hero-desc strong {
   color: var(--text);
