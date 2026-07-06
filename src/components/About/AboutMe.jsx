@@ -61,138 +61,115 @@ export default function AboutMe() {
   const ref = useReveal();
 
   return (
-    <section id="AboutMe" className="sec" ref={ref}>
-      <div className="wrap">
-        <div className="ab-grid">
-          {/* <div className="fi" style={{ position: "relative" }}>
-            <div className="ab-img-box">🧑‍💻</div>
-            <div className="ab-badge">
-              <span className="bn">
-                2000<span style={{ fontSize: "1.5rem" }}>+</span>
-              </span>
-              <span className="bl">Problems Solved</span>
+    <>
+      <div className="about-me-root">
+        {/* ================= HERO ================= */}
+        <section className="hero" id="about">
+          <div className="hero-grid">
+            <div className="hero-left reveal">
+              <h1 className="hero-title">ABOUT ME</h1>
+              <div className="hero-desc">
+                <p>
+                  I'm <strong className="ab-strong">Nur Alam Joy</strong>, a
+                  Computer Science student with a deep passion for competitive
+                  programming, algorithm design, and AI research. My journey
+                  began with curiosity and evolved into a lifelong pursuit of
+                  excellence.
+                </p>
+                <p>
+                  As <strong className="ab-strong-p">President of PUCC</strong>,
+                  I lead initiatives inspiring fellow students to explore
+                  technology and competitive programming — organizing workshops,
+                  hackathons, and inter-university contests.
+                </p>
+                <p>
+                  My CP journey led me to the{" "}
+                  <strong className="ab-strong-p">
+                    ICPC Asia Dhaka Regional
+                  </strong>{" "}
+                  as a finalist. I've participated in 10+ IUPCs, solved 2000+
+                  problems, and I'm currently exploring research in Computer
+                  Vision and NLP.
+                </p>
+              </div>
+              <div className="hero-actions">
+                <a href="#focus" className="btn btn-primary">
+                  <span className="magnet">View Current Work</span>
+                </a>
+                <a href="#timeline" className="btn btn-ghost glass">
+                  <span className="magnet">Achievement Timeline</span>
+                </a>
+              </div>
             </div>
-          </div> */}
-          <div className="fi" style={{ transitionDelay: "0.14s" }}>
-            <span className="eyebrow">About Me</span>
-            <h2 className="ab-title">
-              Passionate Coder.
-              <br />
-              <span className="ab-grad">Problem Solver.</span>
-            </h2>
-            <div className="divbar"></div>
-            <div className="ab-paras">
-              <p>
-                I'm <strong className="ab-strong">Nur Alam Joy</strong>, a
-                Computer Science student with a deep passion for competitive
-                programming, algorithm design, and AI research. My journey began
-                with curiosity and evolved into a lifelong pursuit of
-                excellence.
-              </p>
-              <p>
-                As <strong className="ab-strong-p">President of PUCC</strong>, I
-                lead initiatives inspiring fellow students to explore technology
-                and competitive programming — organizing workshops, hackathons,
-                and inter-university contests.
-              </p>
-              <p>
-                My CP journey led me to the{" "}
-                <strong className="ab-strong-p">
-                  ICPC Asia Dhaka Regional
-                </strong>{" "}
-                as a finalist. I've participated in 10+ IUPCs, solved 2000+
-                problems, and I'm currently exploring research in Computer
-                Vision and NLP.
-              </p>
-            </div>
-            <div className="ab-info">
-              {INFO.map((i) => (
-                <div className="ab-item" key={i.label}>
-                  <div className="al">{i.label}</div>
-                  <div
-                    className="av"
-                    style={i.highlight ? { color: "#34d399" } : undefined}
-                  >
-                    {i.value}
+
+            <div className="hero-right reveal">
+              <div className="glass judge-card card-tilt">
+                <div className="judge-topbar">
+                  <div className="traffic">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div className="judge-path">~/profile/about.json</div>
+                </div>
+                <div className="judge-body">
+                  <div className="judge-line">
+                    <span className="judge-key">"name"</span>
+                    <span className="judge-punc">:</span>{" "}
+                    <span className="judge-str">"Nur Alam Joy"</span>
+                  </div>
+                  <div className="judge-line">
+                    <span className="judge-key">"university"</span>
+                    <span className="judge-punc">:</span>{" "}
+                    <span className="judge-str">
+                      "Premier University, Chittagong"
+                    </span>
+                  </div>
+                  <div className="judge-line">
+                    <span className="judge-key">"department"</span>
+                    <span className="judge-punc">:</span>{" "}
+                    <span className="judge-str">
+                      "Computer Science & Engineering"
+                    </span>
+                  </div>
+                  <div className="judge-line">
+                    <span className="judge-key">"focus"</span>
+                    <span className="judge-punc">:</span>{" "}
+                    <span className="judge-str">
+                      "AI/ML Research, MERN Development"
+                    </span>
+                  </div>
+                  <div className="judge-line">
+                    <span className="judge-key">"availability"</span>
+                    <span className="judge-punc">:</span>{" "}
+                    <span className="judge-str">
+                      "Open to research & internship roles"
+                    </span>
+                    <span className="cursor-blink"></span>
+                  </div>
+                  <div className="verdict">
+                    Status: Accepted — Actively Building
                   </div>
                 </div>
-              ))}
-            </div>
-            <div className="tags">
-              {TAGS.map((t) => (
-                <span className="tag" key={t}>
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* ======right segment json style====== */}
-
-          <div className="w-full max-w-4xl overflow-hidden rounded-[30px] border border-white/10 bg-gradient-to-br from-[#120d1f] to-[#0b1220] shadow-[0_0_60px_rgba(0,255,255,.05)]">
-            {/* Header */}
-            <div className="flex h-14 items-center justify-between border-b border-white/10 px-6">
-              <div className="flex items-center gap-3">
-                <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
-                <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
-                <span className="h-3 w-3 rounded-full bg-[#28c840]" />
-              </div>
-
-              <span className="font-mono text-sm text-white/30">
-                ~/profile/about.json
-              </span>
-            </div>
-
-            {/* Body */}
-            <div className="space-y-8 p-8">
-              {/* Logo */}
-              <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-indigo-500 via-sky-500 to-cyan-400 text-4xl font-extrabold text-[#0d1117] shadow-[0_0_35px_rgba(0,255,255,.25)]">
-                NJ
-              </div>
-
-              {/* JSON Data */}
-              <div className="space-y-4 font-mono text-xl">
-                {profile.map((item) => (
-                  <div
-                    key={item.key}
-                    className="flex flex-wrap items-start gap-3"
-                  >
-                    <span className="text-[#8b7cf6]">"{item.key}"</span>
-
-                    <span className="text-white/40">:</span>
-
-                    <span className="text-cyan-400">"{item.value}"</span>
+                <div className="judge-footer">
+                  <div className="mini-stat">
+                    <b>2000+</b>
+                    <span>Solved</span>
                   </div>
-                ))}
-              </div>
-
-              {/* Status */}
-              <div className="inline-flex items-center gap-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 px-6 py-3 font-medium text-cyan-400 shadow-[0_0_20px_rgba(0,255,255,.1)]">
-                <span>✓</span>
-                <span>Status: Accepted — Actively Building</span>
-              </div>
-            </div>
-
-            {/* Footer */}
-            <div className="grid grid-cols-1 gap-5 border-t border-white/10 p-8 md:grid-cols-3">
-              {stats.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-2xl border border-white/10 bg-white/[0.03] py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/30 hover:bg-cyan-500/5"
-                >
-                  <h2 className="text-4xl font-bold text-white">
-                    {item.value}
-                  </h2>
-
-                  <p className="mt-3 text-sm uppercase tracking-[0.25em] text-white/40">
-                    {item.label}
-                  </p>
+                  <div className="mini-stat">
+                    <b>Specialist</b>
+                    <span>Codeforces</span>
+                  </div>
+                  <div className="mini-stat">
+                    <b>Regional</b>
+                    <span>ICPC Dhaka</span>
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </>
   );
 }
