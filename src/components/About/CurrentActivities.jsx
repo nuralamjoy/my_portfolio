@@ -1,8 +1,5 @@
 
-import "./CurrentActivities.css";
 
-// Edit this array to update the section. Newest entry first.
-// type controls the icon: "project" | "article" | "talk" | "oss" | "award"
 const activities = [
   {
     type: "project",
@@ -106,146 +103,273 @@ const icons = {
 };
 
 const LinkArrow = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    className="w-3 h-3 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
-  >
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <path d="M7 17L17 7M7 7h10v10" />
   </svg>
 );
 
+const css = `
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  .ra-section{
+    --bg: #0C0B09;
+    --surface: #15130F;
+    --surface-hover: #1B1814;
+    --line: rgba(184,147,95,0.16);
+    --gold: #B8935F;
+    --gold-bright: #E8C888;
+    --text: #EDE7DD;
+    --text-muted: #8C8578;
+    --text-faint: #55503F;
+
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    padding: 96px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ra-section *{ box-sizing: border-box; }
+
+  .ra-section::before{
+    content:'';
+    position:absolute;
+    top:-200px; left:50%;
+    transform: translateX(-50%);
+    width: 900px; height: 500px;
+    background: radial-gradient(ellipse at center, rgba(184,147,95,0.08), transparent 70%);
+    pointer-events:none;
+  }
+
+  .ra-wrap{
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .ra-eyebrow{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .ra-eyebrow .dot{
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold-bright);
+    box-shadow: 0 0 0 0 rgba(232,200,136,0.6);
+    animation: ra-pulse 2.4s infinite;
+  }
+  @keyframes ra-pulse{
+    0%   { box-shadow: 0 0 0 0 rgba(232,200,136,0.45); }
+    70%  { box-shadow: 0 0 0 8px rgba(232,200,136,0); }
+    100% { box-shadow: 0 0 0 0 rgba(232,200,136,0); }
+  }
+
+  .ra-heading{
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4vw, 44px);
+    letter-spacing: -0.01em;
+    margin: 0 0 8px 0;
+  }
+  .ra-heading em{
+    font-style: italic;
+    color: var(--gold-bright);
+    font-weight: 300;
+  }
+
+  .ra-sub{
+    color: var(--text-muted);
+    font-size: 15px;
+    max-width: 480px;
+    margin: 0 0 56px 0;
+    line-height: 1.6;
+  }
+
+  .ra-timeline{
+    position: relative;
+    padding-left: 28px;
+  }
+  .ra-timeline::before{
+    content:'';
+    position: absolute;
+    left: 5px; top: 6px; bottom: 6px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold) 0%, var(--line) 12%, var(--line) 88%, transparent 100%);
+  }
+
+  .ra-item{
+    position: relative;
+    padding-bottom: 44px;
+  }
+  .ra-item:last-child{ padding-bottom: 0; }
+
+  .ra-node{
+    position: absolute;
+    left: -28px; top: 4px;
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1.5px solid var(--gold);
+  }
+  .ra-item.is-current .ra-node{
+    background: var(--gold-bright);
+    border-color: var(--gold-bright);
+    box-shadow: 0 0 0 4px rgba(232,200,136,0.14), 0 0 14px rgba(232,200,136,0.5);
+  }
+
+  .ra-date{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .ra-item.is-current .ra-date{ color: var(--gold); }
+
+  .ra-card{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px;
+    transition: border-color .25s ease, background .25s ease, transform .25s ease;
+  }
+  .ra-card:hover{
+    background: var(--surface-hover);
+    border-color: rgba(184,147,95,0.4);
+    transform: translateX(2px);
+  }
+
+  .ra-row{
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .ra-icon{
+    flex-shrink: 0;
+    width: 34px; height: 34px;
+    border-radius: 8px;
+    background: rgba(184,147,95,0.09);
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-bright);
+  }
+  .ra-icon svg{ width: 16px; height: 16px; }
+
+  .ra-body{ flex: 1; min-width: 0; }
+
+  .ra-title-row{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .ra-title{
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .ra-tag{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(184,147,95,0.08);
+    border: 1px solid var(--line);
+    padding: 3px 8px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .ra-desc{
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 6px 0 0 0;
+  }
+
+  .ra-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--gold-bright);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s ease, gap .2s ease;
+  }
+  .ra-link:hover{ border-color: var(--gold-bright); gap: 9px; }
+  .ra-link svg{ width: 12px; height: 12px; transition: transform .2s ease; }
+  .ra-link:hover svg{ transform: translate(1px,-1px); }
+
+  @media (max-width: 560px){
+    .ra-section{ padding: 64px 16px; }
+    .ra-card{ padding: 18px; }
+    .ra-title-row{ flex-direction: column; align-items: flex-start; gap: 6px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .ra-eyebrow .dot{ animation: none; }
+    .ra-card, .ra-link, .ra-link svg{ transition: none; }
+  }
+`;
+
 export default function CurrentActivities() {
   return (
-    <section
-      className="ra-ambient relative overflow-hidden px-6 py-24 bg-gradient-to-b from-[var(--bg)] to-[var(--bg2)]"
-      style={{ color: "var(--txt)" }}
-    >
-      <div className="relative mx-auto max-w-3xl">
-        {/* eyebrow */}
-        <div
-          className="ra-font-m mb-4 flex items-center gap-2.5 text-xs uppercase tracking-widest"
-          style={{ color: "var(--p3)" }}
-        >
-          <span
-            className="ra-pulse inline-block h-1.5 w-1.5 rounded-full"
-            style={{ background: "var(--p3)" }}
-          />
-          Currently in motion
+    <section className="ra-section">
+      <style>{css}</style>
+      <div className="ra-wrap">
+        <div className="ra-eyebrow">
+          <span className="dot"></span>Currently in motion
         </div>
-
-        {/* heading */}
-        <h2 className="ra-font-d mb-2 text-3xl font-semibold tracking-tight sm:text-4xl md:text-[44px]">
-          Recent{" "}
-          <em
-            className="not-italic font-light italic"
-            style={{ color: "var(--p4)" }}
-          >
-            Activity
-          </em>
+        <h2 className="ra-heading">
+          Recent <em>Activity</em>
         </h2>
-
-        <p
-          className="ra-font-b mb-14 max-w-md text-[15px] leading-relaxed sm:mb-16"
-          style={{ color: "var(--txt2)" }}
-        >
+        <p className="ra-sub">
           A running log of what I've been building, writing, and learning lately
           — updated as it happens, not as an afterthought.
         </p>
 
-        {/* timeline */}
-        <div className="relative pl-7 sm:pl-8">
-          {/* vertical line */}
-          <div
-            className="absolute left-[5px] top-1.5 bottom-1.5 w-px bg-gradient-to-b from-[var(--p2)] via-[var(--border)] to-transparent"
-            aria-hidden="true"
-          />
-
+        <div className="ra-timeline">
           {activities.map((item, i) => (
-            <div key={i} className="relative pb-9 last:pb-0 sm:pb-11">
-              {/* node */}
-              <div
-                className={`absolute -left-7 top-1 h-2.5 w-2.5 rounded-full border-[1.5px] sm:-left-8 ${
-                  item.current ? "ra-node-glow" : ""
-                }`}
-                style={{
-                  background: item.current ? "var(--p3)" : "var(--bg)",
-                  borderColor: item.current ? "var(--p3)" : "var(--p2)",
-                }}
-              />
-
-              {/* date */}
-              <div
-                className="ra-font-m mb-2.5 text-[11px] uppercase tracking-wide"
-                style={{ color: item.current ? "var(--p3)" : "var(--txt3)" }}
-              >
+            <div
+              key={i}
+              className={`ra-item ${item.current ? "is-current" : ""}`}
+            >
+              <div className="ra-node"></div>
+              <div className="ra-date">
                 {item.date}
                 {item.current ? " · Now" : ""}
               </div>
-
-              {/* card */}
-              <div
-                className="ra-card rounded-2xl border p-5 sm:p-6"
-                style={{
-                  background: "var(--card)",
-                  borderColor: "var(--border)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--card-h)";
-                  e.currentTarget.style.borderColor = "var(--border2)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "var(--card)";
-                  e.currentTarget.style.borderColor = "var(--border)";
-                }}
-              >
-                <div className="flex items-start gap-3.5">
-                  {/* icon */}
-                  <div
-                    className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border sm:h-9 sm:w-9"
-                    style={{
-                      background: "var(--glow2)",
-                      borderColor: "var(--border)",
-                      color: "var(--p3)",
-                    }}
-                  >
-                    <span className="h-4 w-4 block">{icons[item.type]}</span>
+              <div className="ra-card">
+                <div className="ra-row">
+                  <div className="ra-icon">
+                    {icons[item.type] || icons.project}
                   </div>
-
-                  <div className="min-w-0 flex-1">
-                    <div className="flex flex-wrap items-baseline justify-between gap-3">
-                      <h3 className="ra-font-d text-[16px] font-medium sm:text-[17px]">
-                        {item.title}
-                      </h3>
-                      <span
-                        className="ra-font-m whitespace-nowrap rounded-full border px-2 py-0.5 text-[10.5px] uppercase tracking-wide"
-                        style={{
-                          color: "var(--p3)",
-                          background: "var(--glow2)",
-                          borderColor: "var(--border)",
-                        }}
-                      >
-                        {item.tag}
-                      </span>
+                  <div className="ra-body">
+                    <div className="ra-title-row">
+                      <h3 className="ra-title">{item.title}</h3>
+                      <span className="ra-tag">{item.tag}</span>
                     </div>
-
-                    <p
-                      className="ra-font-b mt-1.5 text-[14px] leading-relaxed"
-                      style={{ color: "var(--txt2)" }}
-                    >
-                      {item.desc}
-                    </p>
-
+                    <p className="ra-desc">{item.desc}</p>
                     {item.link && (
-                      <a
-                        href={item.link.href}
-                        className="group/link mt-3 inline-flex items-center gap-1.5 text-[13px] no-underline"
-                        style={{ color: "var(--p4)" }}
-                      >
-                        {item.link.label}
-                        <LinkArrow />
+                      <a className="ra-link" href={item.link.href}>
+                        {item.link.label} <LinkArrow />
                       </a>
                     )}
                   </div>
