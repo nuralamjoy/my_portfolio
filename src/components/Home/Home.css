@@ -9,11 +9,14 @@
   padding-top: var(--nav-h);
   position: relative;
   overflow: hidden;
+  
 }
 .Home {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  /* padding: 80px 20px; */
+  padding: 20px;
   /* background-color: aquamarine; */
 }
 .grid-ov {
