@@ -66,7 +66,7 @@ export default function AboutMe() {
         {/* ================= HERO ================= */}
         <section className="hero" id="about">
           <div className="hero-grid">
-            <div className="hero-left reveal">
+            <div className="hero-left reveal ">
               <h1 className="hero-title">ABOUT ME</h1>
               <div className="hero-desc">
                 <p>
@@ -102,7 +102,9 @@ export default function AboutMe() {
               </div>
             </div>
 
-            <div className="hero-right reveal">
+            {/* ========right section json style====== */}
+
+            <div className="hero-right reveal ">
               <div className="glass judge-card card-tilt">
                 <div className="judge-topbar">
                   <div className="traffic">
@@ -113,38 +115,21 @@ export default function AboutMe() {
                   <div className="judge-path">~/profile/about.json</div>
                 </div>
                 <div className="judge-body">
-                  <div className="judge-line">
-                    <span className="judge-key">"name"</span>
-                    <span className="judge-punc">:</span>{" "}
-                    <span className="judge-str">"Nur Alam Joy"</span>
-                  </div>
-                  <div className="judge-line">
-                    <span className="judge-key">"university"</span>
-                    <span className="judge-punc">:</span>{" "}
-                    <span className="judge-str">
-                      "Premier University, Chittagong"
-                    </span>
-                  </div>
-                  <div className="judge-line">
-                    <span className="judge-key">"department"</span>
-                    <span className="judge-punc">:</span>{" "}
-                    <span className="judge-str">
-                      "Computer Science & Engineering"
-                    </span>
-                  </div>
-                  <div className="judge-line">
-                    <span className="judge-key">"focus"</span>
-                    <span className="judge-punc">:</span>{" "}
-                    <span className="judge-str">
-                      "AI/ML Research, MERN Development"
-                    </span>
-                  </div>
-                  <div className="judge-line">
-                    <span className="judge-key">"availability"</span>
-                    <span className="judge-punc">:</span>{" "}
-                    <span className="judge-str">
-                      "Open to research & internship roles"
-                    </span>
+
+                  {/* JSON Data */}
+                  <div className="JsonData relative font-mono text-sm">
+                    {profile.map((item) => (
+                      <div
+                        key={item.key}
+                        className="flex flex-wrap items-start gap-3"
+                      >
+                        <span className="text-[#8b7cf6]">"{item.key}"</span>
+
+                        <span className="text-white/40">:</span>
+
+                        <span className="text-cyan-400">"{item.value}"</span>
+                      </div>
+                    ))}
                     <span className="cursor-blink"></span>
                   </div>
                   <div className="verdict">

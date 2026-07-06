@@ -16,7 +16,7 @@
   --display: "Space Grotesk", sans-serif;
   --body: "Inter", sans-serif;
 
-  background: var(--bg);
+  /* background: var(--bg); */
   color: var(--text);
   font-family: var(--body);
   line-height: 1.6;
@@ -35,11 +35,12 @@
 }
 
 .about-me-root section {
-  position: relative;
+  /* position: relative; */
   z-index: 1;
   max-width: 1200px;
+  /* background-color: #28c840; */
   margin: 0 auto;
-  padding: 120px 32px;
+  /* padding: 120px 32px; */
 }
 @media (max-width: 768px) {
   .about-me-root section {
@@ -88,7 +89,7 @@ HERO
 .about-me-root .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 64px;
+  gap: 20px;
   align-items: center;
   width: 100%;
 }
@@ -187,14 +188,8 @@ HERO
   border: none;
   box-shadow: 0 8px 30px rgba(124, 92, 255, 0.35);
 }
-.about-me-root .btn-ghost {
-  background: var(--surface);
-  color: var(--text);
-}
-.about-me-root .btn span.magnet {
-  display: inline-flex;
-  transition: transform 0.15s ease;
-}
+
+
 
 /* ---- terminal / judge card (signature element) ---- */
 .about-me-root .judge-card {
@@ -234,33 +229,18 @@ HERO
 }
 
 .about-me-root .judge-body {
+  
   padding: 26px 24px 24px;
   font-family: var(--mono);
   font-size: 13.5px;
 }
-.about-me-root .judge-line {
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-.about-me-root .judge-key {
-  color: var(--violet-soft);
-}
-.about-me-root .judge-str {
-  color: var(--cyan);
-}
-.about-me-root .judge-punc {
-  color: var(--muted-2);
-}
 
-@keyframes aboutMeSpinBorder {
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
 
 .about-me-root .verdict {
   margin-top: 18px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
@@ -278,12 +258,15 @@ HERO
 }
 .about-me-root .cursor-blink {
   display: inline-block;
-  width: 7px;
+  position: absolute;
+  /* bottom: 10; */
+  /* left: 430px; */
+  width: 5px;
   height: 15px;
   background: var(--cyan);
   margin-left: 2px;
   animation: aboutMeBlink 1s steps(1) infinite;
-  vertical-align: middle;
+ 
 }
 @keyframes aboutMeBlink {
   50% {
@@ -323,4 +306,8 @@ HERO
   transition: transform 0.12s ease-out;
   transform-style: preserve-3d;
   will-change: transform;
+}
+
+.JsonData{
+  line-height: 2.5;
 }

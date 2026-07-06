@@ -61,27 +61,27 @@ export default function Home({ startTyping }) {
   return (
     <section id="home">
       <div className="grid-ov"></div>
-      <div className="wrap">
-        <div className="hero-grid">
-          <div className="hero-l fi vis">
-            <div className="hero-badge">
+      <div className="Home">
+        <div className="home-grid">
+          <div className="home-l fi vis">
+            <div className="home-badge">
               🏆 ICPC Asia Dhaka Regional Finalist
             </div>
-            <h1 className="hero-name">
+            <h1 className="home-name">
               <span>Nur Alam</span>
 
               <span className="gn"> Joy</span>
             </h1>
-            <div className="hero-type">
+            <div className="home-type">
               <span>{text}</span>
               <span className="cursor"></span>
             </div>
-            <p className="hero-desc">
+            <p className="home-desc">
               Passionate competitive programmer and research enthusiast from
               Bangladesh. Solving 2000+ algorithmic problems, building impactful
               software, and exploring the frontiers of AI &amp; ML research.
             </p>
-            <div className="hero-cta">
+            <div className="home-cta">
               <a href="#contact" className="btn-p">
                 📬 Get In Touch
               </a>
@@ -105,7 +105,7 @@ export default function Home({ startTyping }) {
             </div>
           </div>
 
-          <div className="hero-r fi vis" style={{ transitionDelay: "0.18s" }}>
+          <div className="home-r fi vis" style={{ transitionDelay: "0.18s" }}>
             <div className="av-wrap">
               <div className="av-ring1"></div>
               <div className="av-ring2"></div>
