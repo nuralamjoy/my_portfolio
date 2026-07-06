@@ -1,5 +1,5 @@
 import useReveal from "../../hooks/useReveal";
-import "./About.css";
+import "./AboutMe.css";
 
 const INFO = [
   { label: "Name", value: "Nur Alam Joy" },
@@ -19,7 +19,7 @@ const TAGS = [
   "Data Structures",
 ];
 
-export default function About() {
+export default function AboutMe() {
   const ref = useReveal();
 
   return (
