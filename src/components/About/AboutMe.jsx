@@ -23,7 +23,7 @@ export default function AboutMe() {
   const ref = useReveal();
 
   return (
-    <section id="about" className="sec" ref={ref}>
+    <section id="AboutMe" className="sec" ref={ref}>
       <div className="wrap">
         <div className="ab-grid">
           {/* <div className="fi" style={{ position: "relative" }}>
