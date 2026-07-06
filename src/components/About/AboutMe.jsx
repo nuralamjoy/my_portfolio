@@ -116,7 +116,7 @@ export default function AboutMe() {
                 </div>
                 <div className="judge-body">
 
-                  {/* JSON Data========== */}
+                  {/* =====JSON Data========== */}
                   <div className="JsonData relative font-mono text-sm">
                     {profile.map((item) => (
                       <div
@@ -127,7 +127,7 @@ export default function AboutMe() {
 
                         <span className="text-white/40">:</span>
 
-                        <span className="text-cyan-400">"{item.value}"</span>
+                        <span className="text-cyan-400 ">"{item.value}"</span>
                       </div>
                     ))}
                     <span className="cursor-blink"></span>
