@@ -38,7 +38,7 @@
   /* position: relative; */
   z-index: 1;
   max-width: 1200px;
-  /* background-color: #28c840; */
+  background-color: #045f1255;
   margin: 0 auto;
   padding: 120px 32px;
 }
@@ -88,7 +88,7 @@ HERO
 }
 .about-me-root .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
   width: 100%;
@@ -103,36 +103,14 @@ HERO
     padding-top: 96px;
   }
 }
+.hero-left{
+  /* background-color: #28c840; */
+}
+.hero-right{
+  /* background-color: #28c840; */
+}
 
-.about-me-root .badge-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 18px 9px 14px;
-  border-radius: 999px;
-  font-family: var(--mono);
-  font-size: 12.5px;
-  color: var(--violet-soft);
-  margin-bottom: 28px;
-  letter-spacing: 0.02em;
-}
-.about-me-root .badge-pill .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--cyan);
-  box-shadow: 0 0 12px var(--cyan);
-  animation: aboutMePulseDot 2s ease-in-out infinite;
-}
-@keyframes aboutMePulseDot {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.35;
-  }
-}
+
 
 .about-me-root h1.hero-title {
   font-family: var(--display);
@@ -151,7 +129,7 @@ HERO
   color: var(--muted);
   font-size: 16px;
   /* max-width: 520px; */
-  margin-bottom: 38px;
+  margin-bottom: 60px;
   text-align: left;
 }
 .hero-desc p{
@@ -230,7 +208,7 @@ HERO
 
 .about-me-root .judge-body {
   
-  padding: 26px 24px 24px;
+  padding: 24px 24px 24px;
   font-family: var(--mono);
   font-size: 13.5px;
 }
