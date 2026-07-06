@@ -19,6 +19,44 @@ const TAGS = [
   "Data Structures",
 ];
 
+const profile = [
+  {
+    key: "name",
+    value: "Nur Alam Joy",
+  },
+  {
+    key: "university",
+    value: "Premier University, Chittagong",
+  },
+  {
+    key: "department",
+    value: "Computer Science & Engineering",
+  },
+  {
+    key: "focus",
+    value: "AI/ML Research, MERN Development",
+  },
+  {
+    key: "availability",
+    value: "Open to research & internship roles",
+  },
+];
+
+const stats = [
+  {
+    value: "2000+",
+    label: "SOLVED",
+  },
+  {
+    value: "Specialist",
+    label: "CODEFORCES",
+  },
+  {
+    value: "Regional",
+    label: "ICPC DHAKA",
+  },
+];
+
 export default function AboutMe() {
   const ref = useReveal();
 
@@ -85,6 +123,71 @@ export default function AboutMe() {
                 <span className="tag" key={t}>
                   {t}
                 </span>
+              ))}
+            </div>
+          </div>
+
+          {/* ======right segment json style====== */}
+
+          <div className="w-full max-w-4xl overflow-hidden rounded-[30px] border border-white/10 bg-gradient-to-br from-[#120d1f] to-[#0b1220] shadow-[0_0_60px_rgba(0,255,255,.05)]">
+            {/* Header */}
+            <div className="flex h-14 items-center justify-between border-b border-white/10 px-6">
+              <div className="flex items-center gap-3">
+                <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+                <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+                <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+              </div>
+
+              <span className="font-mono text-sm text-white/30">
+                ~/profile/about.json
+              </span>
+            </div>
+
+            {/* Body */}
+            <div className="space-y-8 p-8">
+              {/* Logo */}
+              <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-indigo-500 via-sky-500 to-cyan-400 text-4xl font-extrabold text-[#0d1117] shadow-[0_0_35px_rgba(0,255,255,.25)]">
+                NJ
+              </div>
+
+              {/* JSON Data */}
+              <div className="space-y-4 font-mono text-xl">
+                {profile.map((item) => (
+                  <div
+                    key={item.key}
+                    className="flex flex-wrap items-start gap-3"
+                  >
+                    <span className="text-[#8b7cf6]">"{item.key}"</span>
+
+                    <span className="text-white/40">:</span>
+
+                    <span className="text-cyan-400">"{item.value}"</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Status */}
+              <div className="inline-flex items-center gap-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 px-6 py-3 font-medium text-cyan-400 shadow-[0_0_20px_rgba(0,255,255,.1)]">
+                <span>✓</span>
+                <span>Status: Accepted — Actively Building</span>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="grid grid-cols-1 gap-5 border-t border-white/10 p-8 md:grid-cols-3">
+              {stats.map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-2xl border border-white/10 bg-white/[0.03] py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/30 hover:bg-cyan-500/5"
+                >
+                  <h2 className="text-4xl font-bold text-white">
+                    {item.value}
+                  </h2>
+
+                  <p className="mt-3 text-sm uppercase tracking-[0.25em] text-white/40">
+                    {item.label}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
