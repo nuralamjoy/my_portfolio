@@ -236,13 +236,13 @@ body {
 }
 
 /* ===================== RESPONSIVE (cross-section) ===================== */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .chip1,
   .chip2,
   .chip3 {
     display: none;
   }
-}
+} */
 @media (max-width: 640px) {
   .sec {
     padding: 4rem 0;

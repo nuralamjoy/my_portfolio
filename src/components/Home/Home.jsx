@@ -105,8 +105,8 @@ export default function Home({ startTyping }) {
             </div>
           </div>
 
-          <div className="home-r fi vis" style={{ transitionDelay: "0.18s" }}>
-            <div className="av-wrap">
+          <div className="home-r fi vis  " style={{ transitionDelay: "0.18s" }}>
+            <div className="av-wrap hidden md:block">
               <div className="av-ring1"></div>
               <div className="av-ring2"></div>
               <div className="av-ring3"></div>
