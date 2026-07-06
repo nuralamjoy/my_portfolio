@@ -40,7 +40,7 @@
   max-width: 1200px;
   /* background-color: #28c840; */
   margin: 0 auto;
-  /* padding: 120px 32px; */
+  padding: 120px 32px;
 }
 @media (max-width: 768px) {
   .about-me-root section {
