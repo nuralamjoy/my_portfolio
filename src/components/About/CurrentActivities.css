@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 .ra-section{
-  --bg: #0C0B09;
+  --bg: #050010;
   --surface: #15130F;
   --surface-hover: #1B1814;
   --line: rgba(184,147,95,0.16);
@@ -11,12 +11,13 @@
   --text-muted: #8C8578;
   --text-faint: #55503F;
 
-  background: var(--bg);
+  background-color: var(--bg);
+  /* background-color: aqua; */
   max-width: 1200px;
   color: var(--text);
   font-family: 'Inter', sans-serif;
   /* padding: 96px 24px; */
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
   border-radius: 20px;
   margin: 0 auto;
@@ -24,17 +25,7 @@
   margin-top: 40px;
 }
 
-.ra-section *{ box-sizing: border-box; }
 
-.ra-section::before{
-  content:'';
-  position:absolute;
-  top:-200px; left:50%;
-  transform: translateX(-50%);
-  width: 900px; height: 500px;
-  background: radial-gradient(ellipse at center, rgba(184,147,95,0.08), transparent 70%);
-  pointer-events:none;
-}
 
 .ra-wrap{
   max-width: 760px;
