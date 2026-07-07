@@ -12,11 +12,16 @@
   --text-faint: #55503F;
 
   background: var(--bg);
+  max-width: 1200px;
   color: var(--text);
   font-family: 'Inter', sans-serif;
-  padding: 96px 24px;
+  /* padding: 96px 24px; */
   position: relative;
   overflow: hidden;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 120px 32px;
+  margin-top: 40px;
 }
 
 .ra-section *{ box-sizing: border-box; }
@@ -33,7 +38,7 @@
 
 .ra-wrap{
   max-width: 760px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   position: relative;
 }
 
@@ -124,7 +129,7 @@
 .ra-item.is-current .ra-date{ color: var(--gold); }
 
 .ra-card{
-  background: var(--surface);
+  background: var(--glow2);
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 22px 24px;
@@ -167,7 +172,7 @@
   font-family: 'Fraunces', serif;
   font-weight: 500;
   font-size: 17px;
-  color: var(--text);
+  color: var(--txt);
   margin: 0;
 }
 
