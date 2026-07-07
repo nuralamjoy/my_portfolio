@@ -222,7 +222,7 @@
 
 
 .ra-section{
-  --bg: #0D0B1A;
+  --bg: #050010;
   --surface: #15122B;
   --surface-hover: #1C1838;
   --line: rgba(139,92,246,0.16);
@@ -232,11 +232,13 @@
   --text-muted: #9D96C2;
   --text-faint: #4F4A72;
 
+  max-width: 1200px;
+  margin: 60px auto;
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', sans-serif;
-  padding: 96px 24px;
-  position: relative;
+  padding: 60px 32px;
+  /* position: relative; */
   overflow: hidden;
 }
 
@@ -254,7 +256,7 @@
 
 .ra-wrap{
   max-width: 760px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   position: relative;
 }
 
@@ -370,7 +372,7 @@
   background: rgba(139,92,246,0.09);
   border: 1px solid var(--line);
   display: flex; align-items: center; justify-content: center;
-  color: var(--gold-bright);
+  color: var(--gold);
 }
 .ra-icon svg{ width: 16px; height: 16px; }
 
@@ -728,3 +730,9 @@
     gap: 0.75rem;
   }
 } */
+
+.ra-card:hover .ra-icon {
+  color: var(--gold-bright);
+  transform: scale(1.08) rotate(-4deg);
+  
+}
