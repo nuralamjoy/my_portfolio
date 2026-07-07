@@ -41,7 +41,7 @@
   background-color: var(--bg);
   /* background-color: #37035ac2; */
   border-radius: 20px;
-  margin: 0 auto;
+  margin: 60px auto;
   padding: 120px 32px;
 }
 @media (max-width: 768px) {
