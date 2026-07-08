@@ -1,10 +1,10 @@
 .facts-body{
     --bg: #050010;
-    /* background-color: var(--bg); */
+    background-color: var(--bg);
    
-    background-color: antiquewhite;
-    
-    padding: 120px 32px;
+    /* background-color: antiquewhite; */
+    border-radius: 20px;
+    padding: 60px 32px;
 }
 
 
