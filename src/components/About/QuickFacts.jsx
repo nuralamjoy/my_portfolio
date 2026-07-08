@@ -1,4 +1,4 @@
-
+import "./QuickFacts.css";
 
 const FACTS = [
   {
