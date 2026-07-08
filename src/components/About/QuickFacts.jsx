@@ -52,10 +52,10 @@ export default function QuickFacts() {
             <div
               key={i}
               className="
-                group rounded-2xl border border-white/10 bg-white/5
+                group rounded-2xl border border-white/10 bg-[#15122B]
                 p-6 backdrop-blur-md
                 transition-all duration-300 ease-out
-                hover:-translate-y-1.5 hover:border-violet-400/40
+                hover:-translate-y-1.5 hover:border-[rgba(139,92,246,0.4)]
                 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4),0_0_0_1px_rgba(124,92,255,0.15)]
               "
             >
