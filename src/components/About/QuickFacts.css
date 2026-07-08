@@ -1,0 +1,10 @@
+.facts-Body{
+    --bg: #050010;
+    /* background-color: var(--bg); */
+   
+    background-color: antiquewhite;
+    
+    padding: 120px 32px;
+}
+
+
