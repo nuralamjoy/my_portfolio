@@ -55,7 +55,7 @@ export default function QuickFacts() {
                 group rounded-2xl border border-white/10 bg-[#15122B]
                 p-6 backdrop-blur-md
                 transition-all duration-300 ease-out
-                hover:-translate-y-1.5 hover:border-[rgba(139,92,246,0.4)]
+                hover:-translate-y-1.5 hover:border-[#8B5CF6]
                 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4),0_0_0_1px_rgba(124,92,255,0.15)]
               "
             >
