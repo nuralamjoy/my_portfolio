@@ -1,5 +1,6 @@
 import AboutMe from "./AboutMe";
 import CurrentActivities from "./CurrentActivities";
+import FocusArea from "./FocusArea";
 import QuickFacts from "./QuickFacts";
 
 
@@ -11,7 +12,7 @@ export default function About() {
       <AboutMe></AboutMe>
       <CurrentActivities></CurrentActivities>
       <QuickFacts></QuickFacts>
-      <QuickFacts></QuickFacts>
+      <FocusArea></FocusArea>
     </>
     
   );
