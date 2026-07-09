@@ -1,7 +1,9 @@
 
 
-export const FocusArea = () => {
+const FocusArea = () => {
   return (
     <div>FocusArea</div>
   )
 }
+
+export default FocusArea
