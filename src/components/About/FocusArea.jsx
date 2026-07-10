@@ -1,4 +1,4 @@
-
+import { FaBrain } from "react-icons/fa";
 
 const FocusArea = () => {
   return (
@@ -10,7 +10,7 @@ const FocusArea = () => {
           <div className="fa-card">
             <div className="fa-card-upper">
               <div className="fa-card-icon">
-                
+                <FaBrain />
               </div>
             </div>
             <h3 className="fa-card-title">Artificial Intelligence</h3>
@@ -23,6 +23,6 @@ const FocusArea = () => {
       </div>
     </section>
   );
-}
+};
 
-export default FocusArea
+export default FocusArea;
