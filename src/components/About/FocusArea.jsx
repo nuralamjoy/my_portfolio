@@ -7,12 +7,18 @@ const FocusArea = () => {
         <div className="focus-header">title======</div>
 
         <div className="focus-card">
-          <div>card 1</div>
-          <div>card 1</div>
-          <div>card 1</div>
-          <div>card 1</div>
-          <div>card 1</div>
-          <div>card 1</div>
+          <div className="fa-card">
+            <div className="fa-card-upper">
+              <div className="fa-card-icon">
+                
+              </div>
+            </div>
+            <h3 className="fa-card-title">Artificial Intelligence</h3>
+            <p className="fa-card-desc">
+              Exploring intelligent systems and AI-powered solutions for
+              real-world problems.
+            </p>
+          </div>
         </div>
       </div>
     </section>
