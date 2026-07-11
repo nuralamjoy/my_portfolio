@@ -1,3 +1,5 @@
+// all data for card
+
 import { TbNetwork } from "react-icons/tb";
 import {
   FiTrendingUp,
