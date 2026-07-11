@@ -122,7 +122,7 @@
 
 // export default FocusArea;
 
-// import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { TbNetwork } from "react-icons/tb";
 import {
   FiTrendingUp,
