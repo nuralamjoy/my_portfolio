@@ -8,17 +8,17 @@ export default function FocusArea() {
 
   return (
     <section
-      className="bg-[#0a0d12] px-5 py-20 md:px-8 md:py-28"
+      className="bg-[#050010] max-w-[1200px] m-auto rounded-2xl px-5 py-15 md:px-8 md:py-28"
       aria-labelledby="fa-heading"
     >
       <div className="mx-auto max-w-[1200px]">
         {/* Section Header */}
-        <div className="mx-auto mb-14 max-w-[640px] text-center md:mb-[72px]">
+        <div className=" mb-14 max-w-[640px]  md:mb-[72px]">
           <span
-            className="relative mb-[22px] inline-flex items-center gap-2.5 pl-4 text-[12.5px] uppercase tracking-[0.14em] text-[#8b93a3]"
+            className="relative mb-[22px] inline-flex items-center gap-2.5 pl-4 text-[12.5px] uppercase tracking-[0.14em] text-[#23f6be]"
             style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
-            <span className="absolute left-0 h-[7px] w-[7px] rounded-full bg-[#6ee7c7] shadow-[0_0_10px_1px_rgba(110,231,199,0.7)]" />
+            <span className="absolute left-0 h-[7px] w-[7px] rounded-full bg-[#23f6be] shadow-[0_0_10px_1px_rgba(110,231,199,0.7)]" />
             Currently tuning in
           </span>
 
@@ -31,7 +31,7 @@ export default function FocusArea() {
           </h2>
 
           <p
-            className="m-0 text-[16.5px] font-normal leading-[1.6] text-[#8b93a3]"
+            className="m-0 text-[16.5px] font-normal leading-[1.6] text-[var(--txt2)]"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             The technologies and domains I'm continuously exploring, building,
