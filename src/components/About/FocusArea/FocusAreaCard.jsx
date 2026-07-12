@@ -54,4 +54,4 @@ function FocusAreaCard({ area, index, cardRefs }) {
   );
 }
 
-export default memo(FocusAreaCard);
+export default memo(FocusAreaCard); //use for memoization

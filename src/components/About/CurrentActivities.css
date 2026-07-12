@@ -233,6 +233,7 @@
   --text-faint: #4F4A72;
 
   max-width: 1200px;
+  border-radius: 20px;
   margin: 60px auto;
   background: var(--bg);
   color: var(--text);
