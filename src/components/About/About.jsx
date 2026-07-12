@@ -9,8 +9,8 @@ export default function About() {
 
   return (
     <>
-      {/* <AboutMe></AboutMe> */}
-      <AboutMe/>
+      <AboutMe></AboutMe>
+      {/* <AboutMe/> */}
       {/* <CurrentActivities></CurrentActivities> */}
       <CurrentActivities/>
       {/* <QuickFacts></QuickFacts> */}
