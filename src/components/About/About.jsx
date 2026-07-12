@@ -15,8 +15,8 @@ export default function About() {
       {/* <CurrentActivities/> */}
       <QuickFacts></QuickFacts>
       {/* <QuickFacts/> */}
-      {/* <FocusArea></FocusArea> */}
-      <FocusArea/>
+      <FocusArea></FocusArea>
+      {/* <FocusArea/> */}
     </>
     
   );
