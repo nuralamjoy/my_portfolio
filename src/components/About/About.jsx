@@ -10,7 +10,7 @@ export default function About() {
   return (
     <>
       <AboutMe></AboutMe>
-      <CurrentActivities></CurrentActivities>
+      {/* <CurrentActivities></CurrentActivities> */}
       {/* <QuickFacts></QuickFacts> */}
       <QuickFacts/>
       {/* <FocusArea></FocusArea> */}
