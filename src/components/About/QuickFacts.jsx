@@ -36,8 +36,10 @@ const FACTS = [
 export default function QuickFacts() {
   return (
     <section id="facts" className=" px-4 py-16 sm:px-6 lg:px-8 ">
-      <div className="facts-body  mx-auto max-w-[1200px] bg-[#050010]/70  backdrop-blur-xl rounded-[20px]
-       py-[80px] px-[32px]">
+      <div
+        className="facts-body  mx-auto max-w-[1200px] bg-[#0000005a]  rounded-[20px]
+       border border-white/5 py-[80px] px-[32px]"
+      >
         <div className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-violet-400">
           Quick Facts
         </div>
