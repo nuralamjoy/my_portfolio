@@ -16,13 +16,13 @@
    ========================================================================= */
 
 :root {
-  --c-bg: #0E0B1A;
+  --c-bg: #060310;
   --c-violet: #7c3aed;
   --c-magenta: #d946ef;
   --c-cyan: #22d3ee;
   --c-blue: #3b82f6;
 }
-
+/* --c-bg: #0E0B1A; */
 /* -------------------------------------------------------------------------
    ROOT CONTAINER
    Fixed, full-viewport, behind all page content, never intercepts input.
@@ -33,8 +33,9 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: var(--c-bg);
-  z-index: -1111111;
+  /* background: var(--c-bg); */
+  background-color: #d946ef;
+  z-index: -111111111;
   pointer-events: none;
   isolation: isolate; /* keeps blend-modes contained to this layer */
 }
