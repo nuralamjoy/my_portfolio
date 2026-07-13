@@ -62,9 +62,11 @@ export default function AboutMe() {
 
   return (
     <>
-      <div className="about-me-root">
+      <div className="about-me-root ">
         {/* ================= HERO ================= */}
-        <section className="hero relative overflow-visible" id="about">
+        <section className="hero relative overflow-hidden" id="about">
+
+          
           {/* Thin Border */}
           <div
             className="
@@ -89,7 +91,7 @@ export default function AboutMe() {
       left-1/2
       -translate-x-1/2
       w-44
-      h-[1px]
+      h-[2px]
       bg-cyan-300/90
       blur-sm
     "

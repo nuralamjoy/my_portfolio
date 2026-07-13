@@ -36,10 +36,10 @@
 
 .about-me-root section {
   /* position: relative; */
-  z-index: 1;
+  z-index: -1;
   max-width: 1200px;
-  /* background-color: var(--bg); */
-  background-color: #050010a3;
+  background-color: var(--bg);
+  /* background-color: #050010a3; */
   border-radius: 20px;
   margin: 60px auto;
   padding: 120px 32px;
@@ -173,13 +173,16 @@ HERO
 
 
 /* ---- terminal / judge card (signature element) ---- */
+
 .about-me-root .judge-card {
   padding: 0;
   overflow: hidden;
+  
 }
 .about-me-root .judge-topbar {
   display: flex;
   align-items: center;
+ 
   justify-content: space-between;
   padding: 14px 18px;
   border-bottom: 1px solid var(--border);
