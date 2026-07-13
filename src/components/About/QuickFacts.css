@@ -1,11 +1,61 @@
-.facts-body{
+/* .facts-body{
     --bg: #050010;
     background-color: var(--bg);
    
-    /* background-color: antiquewhite; */
+   
     border-radius: 20px;
     padding: 60px 32px;
-}
+} */
+
+
+
+.facts-body {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* thin line */
+  .facts-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+  
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(139,92,246,.4),
+      #22d3ee,
+      rgba(139,92,246,.4),
+      transparent
+    );
+  }
+  
+  /* glow */
+  .facts-body::after {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 40px;
+  
+    background: radial-gradient(
+      ellipse,
+      rgba(34,211,238,.22),
+      rgba(139,92,246,.18),
+      transparent 70%
+    );
+  
+    filter: blur(18px);
+    pointer-events: none;
+  }
+
+
+
 /* [data-theme='light'] .facts-body {
     background: rgba(225, 191, 247, 0.189);
   } */
