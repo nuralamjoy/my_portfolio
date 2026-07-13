@@ -38,8 +38,8 @@
   /* position: relative; */
   z-index: 1;
   max-width: 1200px;
-  background-color: var(--bg);
-  /* background-color: #37035ac2; */
+  /* background-color: var(--bg); */
+  background-color: #050010a3;
   border-radius: 20px;
   margin: 60px auto;
   padding: 120px 32px;
