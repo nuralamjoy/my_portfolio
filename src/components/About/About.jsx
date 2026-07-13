@@ -10,11 +10,8 @@ export default function About() {
   return (
     <>
       <AboutMe></AboutMe>
-      
       <CurrentActivities></CurrentActivities>
-      
       <QuickFacts></QuickFacts>
-      
       <FocusArea></FocusArea>
       
     </>

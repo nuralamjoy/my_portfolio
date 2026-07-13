@@ -11,6 +11,7 @@ export default function FocusArea() {
       className="bg-[#050010] max-w-[1200px] m-auto rounded-2xl px-5 py-15 md:px-8 md:py-28"
       aria-labelledby="fa-heading"
     >
+
       <div className="mx-auto max-w-[1200px]">
         {/* Section Header */}
         <div className=" mb-14 max-w-[640px]  md:mb-[72px]">

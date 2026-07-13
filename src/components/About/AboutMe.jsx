@@ -64,7 +64,51 @@ export default function AboutMe() {
     <>
       <div className="about-me-root">
         {/* ================= HERO ================= */}
-        <section className="hero" id="about">
+        <section className="hero relative overflow-visible" id="about">
+          {/* Thin Border */}
+          <div
+            className="
+      absolute
+      top-0
+      left-1/2
+      -translate-x-1/2
+      w-[90%]
+      h-[1px]
+      bg-gradient-to-r
+      from-transparent
+      via-violet-400/70
+      to-transparent
+    "
+          />
+
+          {/* Center Glow */}
+          <div
+            className="
+      absolute
+      top-0
+      left-1/2
+      -translate-x-1/2
+      w-44
+      h-[1px]
+      bg-cyan-300/90
+      blur-sm
+    "
+          />
+
+          {/* Extra Soft Glow */}
+          <div
+            className="
+      absolute
+      top-0
+      left-1/2
+      -translate-x-1/2
+      w-64
+      h-6
+      bg-cyan-400/30
+      blur-2xl
+    "
+          />
+
           <div className="hero-grid">
             <div className="hero-left reveal ">
               <h1 className="hero-title">ABOUT ME</h1>
@@ -115,7 +159,6 @@ export default function AboutMe() {
                   <div className="judge-path">~/profile/about.json</div>
                 </div>
                 <div className="judge-body">
-
                   {/* =====JSON Data========== */}
                   <div className="JsonData relative font-mono text-sm">
                     {profile.map((item) => (

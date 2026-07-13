@@ -43,6 +43,7 @@
   border-radius: 20px;
   margin: 60px auto;
   padding: 120px 32px;
+  
 }
 @media (max-width: 768px) {
   .about-me-root section {
