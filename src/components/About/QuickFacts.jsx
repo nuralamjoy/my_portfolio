@@ -1,5 +1,5 @@
 import "./QuickFacts.css";
-
+import Card from "../ui/Card";
 const FACTS = [
   {
     icon: "🏆",
