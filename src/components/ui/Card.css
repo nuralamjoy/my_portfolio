@@ -16,14 +16,14 @@
     overflow: hidden;
     isolation: isolate;
     
-    background: radial-gradient(
+    /* background: radial-gradient(
       140% 140% at 0% 0%,
       var(--cyan) 0%,
       var(--violet) 28%,
       var(--purple) 48%,
       rgba(76, 29, 149, 0.25) 68%,
       rgba(76, 29, 149, 0) 85%
-    );
+    ); */
   
     /* box-shadow: 0 10px 20px rgb(92, 23, 183); */
   
