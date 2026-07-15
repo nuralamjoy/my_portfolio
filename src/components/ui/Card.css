@@ -25,7 +25,7 @@
       rgba(76, 29, 149, 0) 85%
     );
   
-    box-shadow: 0 5px 5px rgba(165, 125, 224, 0.444);
+    box-shadow: 0 5px 15px rgb(165, 125, 224);
   
     transform: translateZ(0);
     will-change: transform;
