@@ -35,7 +35,7 @@
       box-shadow .55s ease;
   }
   
-  /* Hover Gradient Overlay */
+  /* =====Hover Gradient Overlay */
   
   .card::before{
     content:"";
