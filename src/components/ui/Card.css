@@ -80,6 +80,13 @@
         #220127 50%,
         #360036 50%
     ); */
+    background:
+          radial-gradient(
+            ellipse 260px 140px at 0% 0%,
+            rgba(240, 201, 160, 0.08),
+            transparent 70%
+          ),
+          linear-gradient(165deg, var(--surface-1) 0%, var(--surface-2) 100%);
   
     color:#f5f3ff;
   }
