@@ -75,11 +75,11 @@
     height:100%;
     overflow:hidden;
   
-    background:linear-gradient(
+    /* background:linear-gradient(
         160deg,
         #220127 50%,
         #360036 50%
-    );
+    ); */
   
     color:#f5f3ff;
   }
