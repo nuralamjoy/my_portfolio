@@ -40,7 +40,7 @@ export default function QuickFacts() {
         className="facts-body  mx-auto max-w-[1200px] bg-[#12001c8d]  rounded-[20px]
        border border-[#3f019d46] py-[80px] px-[32px]"
       >
-        <div className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-violet-400">
+        <div className="quick-headings mb-2 text-2xl  tracking-[0.1em] text-violet-400">
           Quick Facts
         </div>
         <h2 className="mb-3 font-serif text-3xl font-semibold text-white sm:text-4xl">

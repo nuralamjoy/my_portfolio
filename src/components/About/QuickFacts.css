@@ -7,6 +7,12 @@
     padding: 60px 32px;
 } */
 
+.quick-headings{
+  font-family: "Great Vibes", cursive;
+  /* font-size: 3rem; */
+
+  font-weight: 500;
+}
 
 
 .facts-body {
